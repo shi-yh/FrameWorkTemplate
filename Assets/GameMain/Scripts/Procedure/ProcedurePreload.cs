@@ -19,17 +19,12 @@ namespace StarForce
     {
         public static readonly string[] DataTableNames = new string[]
         {
-            "Aircraft",
-            "Armor",
-            "Asteroid",
             "Entity",
             "Music",
             "Scene",
             "Sound",
-            "Thruster",
             "UIForm",
             "UISound",
-            "Weapon",
         };
 
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
@@ -82,7 +77,7 @@ namespace StarForce
                 }
             }
 
-            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
+            procedureOwner.SetData<VarInt32>(Constant.Data.NextSceneId, 1);
             ChangeState<ProcedureChangeScene>(procedureOwner);
         }
 

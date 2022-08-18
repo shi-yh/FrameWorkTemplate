@@ -91,6 +91,7 @@ namespace StarForce
 
         private void StartUpdateResources(object userData)
         {
+            ///这里是因为UI表还没有读入，所以无法执行ui生成相关的逻辑
             if (m_UpdateResourceForm == null)
             {
                 m_UpdateResourceForm = Object.Instantiate(GameEntry.BuiltinData.UpdateResourceFormTemplate);

@@ -5,6 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using System;
+using GameFramework;
 using GameFramework.DataTable;
 using GameFramework.Event;
 using UnityGameFramework.Runtime;
@@ -14,18 +16,13 @@ namespace StarForce
 {
     public class ProcedureChangeScene : ProcedureBase
     {
-        private const int MenuSceneId = 1;
-
-        private bool m_ChangeToMenu = false;
+        private DRScene _sceneData = null;
         private bool m_IsChangeSceneComplete = false;
         private int m_BackgroundMusicId = 0;
 
         public override bool UseNativeDialog
         {
-            get
-            {
-                return false;
-            }
+            get { return false; }
         }
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
@@ -57,18 +54,18 @@ namespace StarForce
             // 还原游戏速度
             GameEntry.Base.ResetNormalGameSpeed();
 
-            int sceneId = procedureOwner.GetData<VarInt32>("NextSceneId");
-            m_ChangeToMenu = sceneId == MenuSceneId;
+            int sceneId = procedureOwner.GetData<VarInt32>(Constant.Data.NextSceneId);
             IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
-            DRScene drScene = dtScene.GetDataRow(sceneId);
-            if (drScene == null)
+            _sceneData = dtScene.GetDataRow(sceneId);
+            if (_sceneData == null)
             {
                 Log.Warning("Can not load scene '{0}' from data table.", sceneId.ToString());
                 return;
             }
 
-            GameEntry.Scene.LoadScene(AssetUtility.GetSceneAsset(drScene.AssetName), Constant.AssetPriority.SceneAsset, this);
-            m_BackgroundMusicId = drScene.BackgroundMusicId;
+
+            GameEntry.Scene.LoadScene(AssetUtility.GetSceneAsset(_sceneData.AssetName), Constant.AssetPriority.SceneAsset, this);
+            m_BackgroundMusicId = _sceneData.BackgroundMusicId;
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -90,19 +87,22 @@ namespace StarForce
                 return;
             }
 
-            if (m_ChangeToMenu)
+
+            Type procedureType = Type.GetType(Utility.Text.Format("StarForce.{0}", _sceneData.ProcedureName));
+
+            if (procedureType != null)
             {
-                ChangeState<ProcedureMenu>(procedureOwner);
+                ChangeState(procedureOwner, procedureType);
             }
             else
             {
-                ChangeState<ProcedureMain>(procedureOwner);
+                Log.Warning("Can not change state,scene procedure '{0}' error, from scene '{1}.{2}'.", _sceneData.ProcedureName.ToString(), _sceneData.Id, _sceneData.AssetName);
             }
         }
 
         private void OnLoadSceneSuccess(object sender, GameEventArgs e)
         {
-            LoadSceneSuccessEventArgs ne = (LoadSceneSuccessEventArgs)e;
+            LoadSceneSuccessEventArgs ne = (LoadSceneSuccessEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -120,7 +120,7 @@ namespace StarForce
 
         private void OnLoadSceneFailure(object sender, GameEventArgs e)
         {
-            LoadSceneFailureEventArgs ne = (LoadSceneFailureEventArgs)e;
+            LoadSceneFailureEventArgs ne = (LoadSceneFailureEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -131,7 +131,7 @@ namespace StarForce
 
         private void OnLoadSceneUpdate(object sender, GameEventArgs e)
         {
-            LoadSceneUpdateEventArgs ne = (LoadSceneUpdateEventArgs)e;
+            LoadSceneUpdateEventArgs ne = (LoadSceneUpdateEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -142,7 +142,7 @@ namespace StarForce
 
         private void OnLoadSceneDependencyAsset(object sender, GameEventArgs e)
         {
-            LoadSceneDependencyAssetEventArgs ne = (LoadSceneDependencyAssetEventArgs)e;
+            LoadSceneDependencyAssetEventArgs ne = (LoadSceneDependencyAssetEventArgs) e;
             if (ne.UserData != this)
             {
                 return;

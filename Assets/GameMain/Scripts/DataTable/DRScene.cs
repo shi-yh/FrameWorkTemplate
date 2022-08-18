@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2021-06-16 21:54:35.610
+// 生成时间：2022-08-18 17:12:33.594
 //------------------------------------------------------------
 
 using GameFramework;
@@ -54,6 +54,15 @@ namespace StarForce
             private set;
         }
 
+        /// <summary>
+        /// 获取进入的流程。
+        /// </summary>
+        public string ProcedureName
+        {
+            get;
+            private set;
+        }
+
         public override bool ParseDataRow(string dataRowString, object userData)
         {
             string[] columnStrings = dataRowString.Split(DataTableExtension.DataSplitSeparators);
@@ -68,6 +77,7 @@ namespace StarForce
             index++;
             AssetName = columnStrings[index++];
             BackgroundMusicId = int.Parse(columnStrings[index++]);
+            ProcedureName = columnStrings[index++];
 
             GeneratePropertyArray();
             return true;
@@ -82,6 +92,7 @@ namespace StarForce
                     m_Id = binaryReader.Read7BitEncodedInt32();
                     AssetName = binaryReader.ReadString();
                     BackgroundMusicId = binaryReader.Read7BitEncodedInt32();
+                    ProcedureName = binaryReader.ReadString();
                 }
             }
 
