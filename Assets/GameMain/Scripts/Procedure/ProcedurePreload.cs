@@ -17,17 +17,7 @@ namespace StarForce
 {
     public class ProcedurePreload : ProcedureBase
     {
-        public static readonly string[] DataTableNames = new string[]
-        {
-            "Entity",
-            "Music",
-            "Scene",
-            "Sound",
-            "UIForm",
-            "UISound",
-            "Asteroid"
-        };
-
+       
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
 
         public override bool UseNativeDialog
@@ -87,8 +77,15 @@ namespace StarForce
             // Preload configs
             LoadConfig("DefaultConfig");
 
+            string[] strs = GameEntry.Config.GetString("ConfigTables").Split(';');
+
+            if (strs==null||strs.Length<=0)
+            {
+                Log.Error("ConfigTables Error");
+            }
+            
             // Preload data tables
-            foreach (string dataTableName in DataTableNames)
+            foreach (string dataTableName in strs)
             {
                 LoadDataTable(dataTableName);
             }

@@ -5,6 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using System.IO;
 using GameFramework;
 using UnityEditor;
 using UnityEngine;
@@ -13,10 +14,10 @@ namespace StarForce.Editor.DataTableTools
 {
     public sealed class DataTableGeneratorMenu
     {
-        [MenuItem("Star Force/Generate DataTables")]
+        [MenuItem("Tools/Generate DataTables")]
         private static void GenerateDataTables()
         {
-            foreach (string dataTableName in ProcedurePreload.DataTableNames)
+            foreach (string dataTableName in GetDataTableNames())
             {
                 DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(dataTableName);
                 if (!DataTableGenerator.CheckRawData(dataTableProcessor, dataTableName))
@@ -31,5 +32,39 @@ namespace StarForce.Editor.DataTableTools
 
             AssetDatabase.Refresh();
         }
+        
+        private static string[] GetDataTableNames()
+        {
+            string dataTablesPath = Application.dataPath + @"/GameMain/DataTables";
+            DirectoryInfo directoryInfo = new DirectoryInfo(dataTablesPath);
+            FileInfo[] fis = directoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
+            string[] dataTableNames = new string[fis.Length];
+            for (int i = 0; i < fis.Length; i++)
+            {
+                dataTableNames[i] = Path.GetFileNameWithoutExtension(fis[i].Name);
+            }
+
+            return dataTableNames;
+        }
+        
+        
+        [MenuItem("Tools/Generate Config", false, 1)]
+        private static void GenerateConfig()
+        {
+            string configPath = Application.dataPath + @"/GameMain/Configs/DefaultConfig";
+
+            DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(configPath);
+            if (!DataTableGenerator.CheckRawData(dataTableProcessor, configPath))
+            {
+                Debug.LogError(Utility.Text.Format("Check raw data failure. DataTableName='{0}'", configPath));
+                return;
+            }
+
+            DataTableGenerator.GenerateDataFile(dataTableProcessor, configPath);
+
+            AssetDatabase.Refresh();
+        }
+        
+        
     }
 }
