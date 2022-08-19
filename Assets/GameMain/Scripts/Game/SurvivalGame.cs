@@ -13,6 +13,8 @@ namespace StarForce
 {
     public class SurvivalGame : GameBase
     {
+        private float m_ElapseSeconds = 0f;
+
         public override GameMode GameMode
         {
             get
@@ -24,7 +26,19 @@ namespace StarForce
         public override void Update(float elapseSeconds, float realElapseSeconds)
         {
             base.Update(elapseSeconds, realElapseSeconds);
-            
+
+            m_ElapseSeconds += elapseSeconds;
+            if (m_ElapseSeconds >= 1f)
+            {
+                m_ElapseSeconds = 0f;
+                IDataTable<DRAsteroid> dtAsteroid = GameEntry.DataTable.GetDataTable<DRAsteroid>();
+                float randomPositionX = -5 + 10* (float)Utility.Random.GetRandomDouble();
+                float randomPositionZ = 10 + 10 * (float)Utility.Random.GetRandomDouble();
+                GameEntry.Entity.ShowAsteroid(new AsteroidData(GameEntry.Entity.GenerateSerialId(), 60000 + Utility.Random.GetRandom(dtAsteroid.Count))
+                {
+                    Position = new Vector3(randomPositionX, 0f, randomPositionZ),
+                });
+            }
         }
     }
 }

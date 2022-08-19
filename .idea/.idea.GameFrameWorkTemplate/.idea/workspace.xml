@@ -2,78 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aba6f01-e241-4431-9c25-fc75968409d2" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/BuildSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/BuildSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/ResourceBuilder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/ResourceBuilder.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Aircraft.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Aircraft.bytes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Aircraft.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Aircraft.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Armor.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Armor.bytes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Armor.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Armor.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Asteroid.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Asteroid.bytes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Asteroid.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Asteroid.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Scene.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Scene.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Scene.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Scene.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Thruster.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Thruster.bytes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Thruster.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Thruster.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Weapon.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Weapon.bytes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Weapon.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Weapon.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/AsteroidExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/AsteroidExplosion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Libraries/LitJson.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Libraries/LitJson.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Materials/prop_asteroid_01_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Materials/prop_asteroid_01_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Materials/prop_asteroid_02_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Materials/prop_asteroid_02_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Materials/prop_asteroid_03_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Materials/prop_asteroid_03_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Materials/vehicle_enemyShip_metal_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Materials/vehicle_enemyShip_metal_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Materials/vehicle_playerShip_glass_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Materials/vehicle_playerShip_glass_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Materials/vehicle_playerShip_metal_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Materials/vehicle_playerShip_metal_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/SurvivalGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/SurvivalGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureChangeScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureChangeScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureMain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureUpdateResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureUpdateResources.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/box.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/box.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/button-filled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/button-filled.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/button-outline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/button-outline.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/checked.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/checked.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/circle-filled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/circle-filled.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/circle-outline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/circle-outline.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/circle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/circle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/dialog-background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/dialog-background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/dialog-title-background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/dialog-title-background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/info.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/info.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/line.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/line.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/progress-conner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/progress-conner.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/progressbar-background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/progressbar-background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/progressbar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/progressbar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/round-button-filled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/round-button-filled.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/round-button-outline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Common/round-button-outline.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Icons/music.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Icons/music.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Icons/sound.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Icons/sound.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Icons/world.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Icons/world.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Logos/unity-logo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UISprites/Logos/unity-logo.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StarForce Launcher.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StarForce Launcher.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityAdsSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,9 +14,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/GameMain/Configs/BuildSettings.xml" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/SurvivalGame.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2DWYKAnp4UR8hbOvY6qWj9cxRde" />
@@ -102,6 +50,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/AssetBundle/OutPut\Star Force.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="G:\UnityProject\GameFrameWorkTemplate\AssetBundle\OutPut" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -132,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660816242310</updated>
       <workItem from="1660816254747" duration="9000" />
+      <workItem from="1660876801465" duration="2468000" />
     </task>
     <servers />
   </component>
@@ -140,6 +97,27 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
