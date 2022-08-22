@@ -32,7 +32,7 @@ namespace StarForce.Editor.DataTableTools
 
             AssetDatabase.Refresh();
         }
-        
+
         private static string[] GetDataTableNames()
         {
             string dataTablesPath = Application.dataPath + @"/GameMain/DataTables";
@@ -46,25 +46,19 @@ namespace StarForce.Editor.DataTableTools
 
             return dataTableNames;
         }
-        
-        
+
+
         [MenuItem("Tools/Generate Config", false, 1)]
         private static void GenerateConfig()
         {
             string configPath = Application.dataPath + @"/GameMain/Configs/DefaultConfig";
 
-            DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(configPath);
-            if (!DataTableGenerator.CheckRawData(dataTableProcessor, configPath))
-            {
-                Debug.LogError(Utility.Text.Format("Check raw data failure. DataTableName='{0}'", configPath));
-                return;
-            }
 
+            DataTableProcessor dataTableProcessor = DataTableGenerator.CreateConfigTableProcessor(configPath);
+            
             DataTableGenerator.GenerateDataFile(dataTableProcessor, configPath);
-
+            
             AssetDatabase.Refresh();
         }
-        
-        
     }
 }

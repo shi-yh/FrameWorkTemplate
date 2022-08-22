@@ -3,9 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="9aba6f01-e241-4431-9c25-fc75968409d2" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRAsteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRAsteroid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,27 +34,27 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugin/BoltCoreMigration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.State/States/StateWidget.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E40E5A8F-982C-4B61-8A93-0D29F9BD091C/e8/6953e8b5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/PlasticSCM/Views/IncomingChanges/Gluon/IncomingChangesTreeHeaderState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/cc/fdd5a6cb/StringComparison.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity 2021.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/MenuOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/ac/83e4539b/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Game/SurvivalGame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Editor/CustomEditors/MarkerTrackEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/ScriptReferenceResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Flow/Options/UnitBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/PlasticSCM/Views/IncomingChanges/Developer/IncomingChangesTab.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BBAE6AF5-2A2A-4BD9-82F8-FDE9721D2C3B/0c/d97287b8/Regex.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/EditorGameService/EditorGameServiceRemoteConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/92/36047f2e/IDictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.State/Transitions/StateTransitionWidget.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -53,10 +63,14 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/SurvivalGame.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityExtension.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AIUtility.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/EditorResourceComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" />
+      <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Config/DefaultConfigHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/ConfigProcessor.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2DWYKAnp4UR8hbOvY6qWj9cxRde" />
@@ -66,6 +80,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -92,10 +108,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4468">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11656">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="4468" />
+      <option name="pid" value="11656" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -112,7 +128,8 @@
       <option name="presentableId" value="Default" />
       <updated>1660816242310</updated>
       <workItem from="1660816254747" duration="9000" />
-      <workItem from="1660876801465" duration="11482000" />
+      <workItem from="1660876801465" duration="11948000" />
+      <workItem from="1661149212606" duration="13068000" />
     </task>
     <servers />
   </component>
@@ -141,6 +158,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -150,29 +168,68 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs</url>
-          <line>55</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableGeneratorMenu.cs" initialLine="55" containingFunctionPresentation="method 'GenerateConfig'">
+          <line>28</line>
+          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableGeneratorMenu.cs" initialLine="28" containingFunctionPresentation="method 'GenerateDataTables'">
             <startOffsets>
-              <option value="2093" />
+              <option value="1049" />
             </startOffsets>
             <endOffsets>
-              <option value="2189" />
+              <option value="1120" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.DataProcessorUtility.cs</url>
-          <line>50</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.DataProcessorUtility.cs" initialLine="50" containingFunctionPresentation="method 'GetDataProcessor'">
+          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs</url>
+          <line>443</line>
+          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="440" containingFunctionPresentation="method 'GenerateDataFile'">
             <startOffsets>
-              <option value="1879" />
+              <option value="15621" />
             </startOffsets>
             <endOffsets>
-              <option value="1914" />
+              <option value="15646" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs</url>
+          <line>531</line>
+          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="528" containingFunctionPresentation="method 'GetRowBytes'">
+            <startOffsets>
+              <option value="19019" />
+            </startOffsets>
+            <endOffsets>
+              <option value="19050" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs</url>
+          <line>538</line>
+          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="535" containingFunctionPresentation="method 'GetRowBytes'">
+            <startOffsets>
+              <option value="19224" />
+            </startOffsets>
+            <endOffsets>
+              <option value="19314" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Config/DefaultConfigHelper.cs</url>
+          <line>103</line>
+          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameFramework\Scripts\Runtime\Config\DefaultConfigHelper.cs" initialLine="103" containingFunctionPresentation="method 'ParseData'">
+            <startOffsets>
+              <option value="4045" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4080" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

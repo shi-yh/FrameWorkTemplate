@@ -18,8 +18,8 @@ namespace StarForce.Editor.DataTableTools
     public sealed partial class DataTableProcessor
     {
         private const string CommentLineSeparator = "#";
-        private static readonly char[] DataSplitSeparators = new char[] { '\t' };
-        private static readonly char[] DataTrimSeparators = new char[] { '\"' };
+        private static readonly char[] DataSplitSeparators = new char[] {'\t'};
+        private static readonly char[] DataTrimSeparators = new char[] {'\"'};
 
         private readonly string[] m_NameRow;
         private readonly string[] m_TypeRow;
@@ -34,6 +34,91 @@ namespace StarForce.Editor.DataTableTools
 
         private string m_CodeTemplate;
         private DataTableCodeGenerator m_CodeGenerator;
+
+
+        public DataTableProcessor(string dataTableFileName, Encoding encoding, int contentStartRow, int nameRow)
+        {
+            if (string.IsNullOrEmpty(dataTableFileName))
+            {
+                throw new GameFrameworkException("Data table file name is invalid.");
+            }
+
+            if (!dataTableFileName.EndsWith(".txt", StringComparison.Ordinal))
+            {
+                throw new GameFrameworkException(Utility.Text.Format("Data table file '{0}' is not a txt.", dataTableFileName));
+            }
+
+            if (!File.Exists(dataTableFileName))
+            {
+                throw new GameFrameworkException(Utility.Text.Format("Data table file '{0}' is not exist.", dataTableFileName));
+            }
+
+
+            string[] lines = File.ReadAllLines(dataTableFileName, encoding);
+
+            int rawRowCount = lines.Length;
+
+            int rawColumnCount = 0;
+
+
+            List<string[]> rawValues = new List<string[]>();
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] rawValue = lines[i].Split(DataSplitSeparators);
+                for (int j = 0; j < rawValue.Length; j++)
+                {
+                    rawValue[j] = rawValue[j].Trim(DataTrimSeparators);
+                }
+
+                if (i == 0)
+                {
+                    rawColumnCount = rawValue.Length;
+                }
+                else if (rawValue.Length != rawColumnCount)
+                {
+                    throw new GameFrameworkException(Utility.Text.Format("Data table file '{0}', raw Column is '{2}', but line '{1}' column is '{3}'.", dataTableFileName, i, rawColumnCount,
+                        rawValue.Length));
+                }
+
+                rawValues.Add(rawValue);
+            }
+
+            m_RawValues = rawValues.ToArray();
+
+            m_ContentStartRow = contentStartRow;
+
+            m_NameRow = m_RawValues[nameRow];
+
+
+            if (contentStartRow < 0)
+            {
+                throw new GameFrameworkException(Utility.Text.Format("Content start row '{0}' is invalid.", contentStartRow));
+            }
+
+            if (contentStartRow > rawRowCount)
+            {
+                throw new GameFrameworkException(Utility.Text.Format("Content start row '{0}' > raw row count '{1}' is not allow.", contentStartRow, rawRowCount));
+            }
+
+            m_DataProcessor = new DataProcessor[rawColumnCount];
+
+            for (int i = 0; i < rawColumnCount; i++)
+            {
+                if (string.IsNullOrEmpty(rawValues[contentStartRow][i]))
+                {
+                    m_DataProcessor[i] = DataProcessorUtility.GetDataProcessor(null);
+                }
+                else
+                {
+                    m_DataProcessor[i] = DataProcessorUtility.GetDataProcessor("string");
+                }
+            }
+
+            m_CodeTemplate = null;
+            m_CodeGenerator = null;
+        }
+
 
         public DataTableProcessor(string dataTableFileName, Encoding encoding, int nameRow, int typeRow, int? defaultValueRow, int? commentRow, int contentStartRow, int idColumn)
         {
@@ -71,7 +156,8 @@ namespace StarForce.Editor.DataTableTools
                 }
                 else if (rawValue.Length != rawColumnCount)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Data table file '{0}', raw Column is '{2}', but line '{1}' column is '{3}'.", dataTableFileName, i, rawColumnCount, rawValue.Length));
+                    throw new GameFrameworkException(Utility.Text.Format("Data table file '{0}', raw Column is '{2}', but line '{1}' column is '{3}'.", dataTableFileName, i, rawColumnCount,
+                        rawValue.Length));
                 }
 
                 rawValues.Add(rawValue);
@@ -184,42 +270,27 @@ namespace StarForce.Editor.DataTableTools
 
         public int RawRowCount
         {
-            get
-            {
-                return m_RawValues.Length;
-            }
+            get { return m_RawValues.Length; }
         }
 
         public int RawColumnCount
         {
-            get
-            {
-                return m_RawValues.Length > 0 ? m_RawValues[0].Length : 0;
-            }
+            get { return m_RawValues.Length > 0 ? m_RawValues[0].Length : 0; }
         }
 
         public int StringCount
         {
-            get
-            {
-                return m_Strings.Length;
-            }
+            get { return m_Strings.Length; }
         }
 
         public int ContentStartRow
         {
-            get
-            {
-                return m_ContentStartRow;
-            }
+            get { return m_ContentStartRow; }
         }
 
         public int IdColumn
         {
-            get
-            {
-                return m_IdColumn;
-            }
+            get { return m_IdColumn; }
         }
 
         public bool IsIdColumn(int rawColumn)
@@ -249,7 +320,7 @@ namespace StarForce.Editor.DataTableTools
                 throw new GameFrameworkException(Utility.Text.Format("Raw column '{0}' is out of range.", rawColumn));
             }
 
-            return string.IsNullOrEmpty(GetName(rawColumn)) || m_DataProcessor[rawColumn].IsComment;
+            return m_DataProcessor[rawColumn].IsComment || string.IsNullOrEmpty(GetName(rawColumn));
         }
 
         public string GetName(int rawColumn)
@@ -471,19 +542,23 @@ namespace StarForce.Editor.DataTableTools
                         {
                             if (m_DataProcessor[rawColumn].IsId || string.IsNullOrEmpty(GetDefaultValue(rawColumn)))
                             {
-                                Debug.LogError(Utility.Text.Format("Parse raw value failure. OutputFileName='{0}' RawRow='{1}' RowColumn='{2}' Name='{3}' Type='{4}' RawValue='{5}'", outputFileName, rawRow, rawColumn, GetName(rawColumn), GetLanguageKeyword(rawColumn), GetValue(rawRow, rawColumn)));
+                                Debug.LogError(Utility.Text.Format("Parse raw value failure. OutputFileName='{0}' RawRow='{1}' RowColumn='{2}' Name='{3}' Type='{4}' RawValue='{5}'", outputFileName,
+                                    rawRow, rawColumn, GetName(rawColumn), GetLanguageKeyword(rawColumn), GetValue(rawRow, rawColumn)));
                                 return null;
                             }
                             else
                             {
-                                Debug.LogWarning(Utility.Text.Format("Parse raw value failure, will try default value. OutputFileName='{0}' RawRow='{1}' RowColumn='{2}' Name='{3}' Type='{4}' RawValue='{5}'", outputFileName, rawRow, rawColumn, GetName(rawColumn), GetLanguageKeyword(rawColumn), GetValue(rawRow, rawColumn)));
+                                Debug.LogWarning(Utility.Text.Format(
+                                    "Parse raw value failure, will try default value. OutputFileName='{0}' RawRow='{1}' RowColumn='{2}' Name='{3}' Type='{4}' RawValue='{5}'", outputFileName, rawRow,
+                                    rawColumn, GetName(rawColumn), GetLanguageKeyword(rawColumn), GetValue(rawRow, rawColumn)));
                                 try
                                 {
                                     m_DataProcessor[rawColumn].WriteToStream(this, binaryWriter, GetDefaultValue(rawColumn));
                                 }
                                 catch
                                 {
-                                    Debug.LogError(Utility.Text.Format("Parse default value failure. OutputFileName='{0}' RawRow='{1}' RowColumn='{2}' Name='{3}' Type='{4}' RawValue='{5}'", outputFileName, rawRow, rawColumn, GetName(rawColumn), GetLanguageKeyword(rawColumn), GetComment(rawColumn)));
+                                    Debug.LogError(Utility.Text.Format("Parse default value failure. OutputFileName='{0}' RawRow='{1}' RowColumn='{2}' Name='{3}' Type='{4}' RawValue='{5}'",
+                                        outputFileName, rawRow, rawColumn, GetName(rawColumn), GetLanguageKeyword(rawColumn), GetComment(rawColumn)));
                                     return null;
                                 }
                             }

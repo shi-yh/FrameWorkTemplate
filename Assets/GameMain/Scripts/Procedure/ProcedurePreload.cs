@@ -76,20 +76,7 @@ namespace StarForce
         {
             // Preload configs
             LoadConfig("DefaultConfig");
-
-            string[] strs = GameEntry.Config.GetString("ConfigTables").Split(';');
-
-            if (strs==null||strs.Length<=0)
-            {
-                Log.Error("ConfigTables Error");
-            }
             
-            // Preload data tables
-            foreach (string dataTableName in strs)
-            {
-                LoadDataTable(dataTableName);
-            }
-
             // Preload dictionaries
             LoadDictionary("Default");
 
@@ -145,6 +132,23 @@ namespace StarForce
 
             m_LoadedFlag[ne.ConfigAssetName] = true;
             Log.Info("Load config '{0}' OK.", ne.ConfigAssetName);
+            
+            
+            ///loadData
+            string[] strs = GameEntry.Config.GetString("Tables").Split(';');
+
+            if (strs==null||strs.Length<=0)
+            {
+                Log.Error("ConfigTables Error");
+            }
+            
+            // Preload data tables
+            foreach (string dataTableName in strs)
+            {
+                LoadDataTable(dataTableName);
+            }
+
+            
         }
 
         private void OnLoadConfigFailure(object sender, GameEventArgs e)
