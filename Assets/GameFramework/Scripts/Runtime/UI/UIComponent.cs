@@ -313,7 +313,7 @@ namespace UnityGameFramework.Runtime
                 return false;
             }
 
-            uiGroupHelper.name = Utility.Text.Format("UI Group - {0}", uiGroupName);
+            uiGroupHelper.name = Utility.TextUtility.Format("UI Group - {0}", uiGroupName);
             uiGroupHelper.gameObject.layer = LayerMask.NameToLayer("UI");
             Transform transform = uiGroupHelper.transform;
             transform.SetParent(m_InstanceRoot);

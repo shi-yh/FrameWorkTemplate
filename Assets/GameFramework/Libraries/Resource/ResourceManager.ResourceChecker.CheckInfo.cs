@@ -207,7 +207,7 @@ namespace GameFramework.Resource
                 {
                     if (m_VersionInfo.Exist)
                     {
-                        throw new GameFrameworkException(Utility.Text.Format("You must set version info of '{0}' only once.", m_ResourceName.FullName));
+                        throw new GameFrameworkException(Utility.TextUtility.Format("You must set version info of '{0}' only once.", m_ResourceName.FullName));
                     }
 
                     m_VersionInfo = new RemoteVersionInfo(m_CachedFileSystemName, loadType, length, hashCode, compressedLength, compressedHashCode);
@@ -224,7 +224,7 @@ namespace GameFramework.Resource
                 {
                     if (m_ReadOnlyInfo.Exist)
                     {
-                        throw new GameFrameworkException(Utility.Text.Format("You must set read-only info of '{0}' only once.", m_ResourceName.FullName));
+                        throw new GameFrameworkException(Utility.TextUtility.Format("You must set read-only info of '{0}' only once.", m_ResourceName.FullName));
                     }
 
                     m_ReadOnlyInfo = new LocalVersionInfo(m_CachedFileSystemName, loadType, length, hashCode);
@@ -241,7 +241,7 @@ namespace GameFramework.Resource
                 {
                     if (m_ReadWriteInfo.Exist)
                     {
-                        throw new GameFrameworkException(Utility.Text.Format("You must set read-write info of '{0}' only once.", m_ResourceName.FullName));
+                        throw new GameFrameworkException(Utility.TextUtility.Format("You must set read-write info of '{0}' only once.", m_ResourceName.FullName));
                     }
 
                     m_ReadWriteInfo = new LocalVersionInfo(m_CachedFileSystemName, loadType, length, hashCode);

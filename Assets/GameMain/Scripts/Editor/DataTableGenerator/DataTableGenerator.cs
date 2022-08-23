@@ -47,7 +47,7 @@ namespace StarForce.Editor.DataTableTools
 
                 if (!NameRegex.IsMatch(name))
                 {
-                    Debug.LogWarning(Utility.Text.Format("Check raw data failure. DataTableName='{0}' Name='{1}'", dataTableName, name));
+                    Debug.LogWarning(Utility.TextUtility.Format("Check raw data failure. DataTableName='{0}' Name='{1}'", dataTableName, name));
                     return false;
                 }
             }
@@ -404,7 +404,7 @@ namespace StarForce.Editor.DataTableTools
             {
                 if (index < 0 || index >= m_Items.Count)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("GetItem with invalid index '{0}'.", index));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("GetItem with invalid index '{0}'.", index));
                 }
 
                 return m_Items[index];

@@ -224,7 +224,7 @@ namespace UnityGameFramework.Runtime
                 return false;
             }
 
-            entityGroupHelper.name = Utility.Text.Format("Entity Group - {0}", entityGroupName);
+            entityGroupHelper.name = Utility.TextUtility.Format("Entity Group - {0}", entityGroupName);
             Transform transform = entityGroupHelper.transform;
             transform.SetParent(m_InstanceRoot);
             transform.localScale = Vector3.one;

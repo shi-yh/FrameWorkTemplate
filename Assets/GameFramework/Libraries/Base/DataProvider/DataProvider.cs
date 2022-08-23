@@ -208,14 +208,14 @@ namespace GameFramework
                     EnsureCachedBytesSize(dataLength);
                     if (dataLength != m_ResourceManager.LoadBinaryFromFileSystem(dataAssetName, s_CachedBytes))
                     {
-                        throw new GameFrameworkException(Utility.Text.Format("Load binary '{0}' from file system with internal error.", dataAssetName));
+                        throw new GameFrameworkException(Utility.TextUtility.Format("Load binary '{0}' from file system with internal error.", dataAssetName));
                     }
 
                     try
                     {
                         if (!m_DataProviderHelper.ReadData(m_Owner, dataAssetName, s_CachedBytes, 0, dataLength, userData))
                         {
-                            throw new GameFrameworkException(Utility.Text.Format("Load data failure in data provider helper, data asset name '{0}'.", dataAssetName));
+                            throw new GameFrameworkException(Utility.TextUtility.Format("Load data failure in data provider helper, data asset name '{0}'.", dataAssetName));
                         }
 
                         if (m_ReadDataSuccessEventHandler != null)
@@ -241,7 +241,7 @@ namespace GameFramework
                     break;
 
                 default:
-                    throw new GameFrameworkException(Utility.Text.Format("Data asset '{0}' is '{1}'.", dataAssetName, result));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Data asset '{0}' is '{1}'.", dataAssetName, result));
             }
         }
 
@@ -284,7 +284,7 @@ namespace GameFramework
                     throw;
                 }
 
-                throw new GameFrameworkException(Utility.Text.Format("Can not parse data string with exception '{0}'.", exception), exception);
+                throw new GameFrameworkException(Utility.TextUtility.Format("Can not parse data string with exception '{0}'.", exception), exception);
             }
         }
 
@@ -367,7 +367,7 @@ namespace GameFramework
                     throw;
                 }
 
-                throw new GameFrameworkException(Utility.Text.Format("Can not parse data bytes with exception '{0}'.", exception), exception);
+                throw new GameFrameworkException(Utility.TextUtility.Format("Can not parse data bytes with exception '{0}'.", exception), exception);
             }
         }
 
@@ -405,7 +405,7 @@ namespace GameFramework
             {
                 if (!m_DataProviderHelper.ReadData(m_Owner, dataAssetName, dataAsset, userData))
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Load data failure in data provider helper, data asset name '{0}'.", dataAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Load data failure in data provider helper, data asset name '{0}'.", dataAssetName));
                 }
 
                 if (m_ReadDataSuccessEventHandler != null)
@@ -435,7 +435,7 @@ namespace GameFramework
 
         private void LoadAssetOrBinaryFailureCallback(string dataAssetName, LoadResourceStatus status, string errorMessage, object userData)
         {
-            string appendErrorMessage = Utility.Text.Format("Load data failure, data asset name '{0}', status '{1}', error message '{2}'.", dataAssetName, status, errorMessage);
+            string appendErrorMessage = Utility.TextUtility.Format("Load data failure, data asset name '{0}', status '{1}', error message '{2}'.", dataAssetName, status, errorMessage);
             if (m_ReadDataFailureEventHandler != null)
             {
                 ReadDataFailureEventArgs loadDataFailureEventArgs = ReadDataFailureEventArgs.Create(dataAssetName, appendErrorMessage, userData);
@@ -473,7 +473,7 @@ namespace GameFramework
             {
                 if (!m_DataProviderHelper.ReadData(m_Owner, dataAssetName, dataBytes, 0, dataBytes.Length, userData))
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Load data failure in data provider helper, data asset name '{0}'.", dataAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Load data failure in data provider helper, data asset name '{0}'.", dataAssetName));
                 }
 
                 if (m_ReadDataSuccessEventHandler != null)

@@ -159,19 +159,19 @@ namespace GameFramework.FileSystem
             fullPath = Utility.Path.GetRegularPath(fullPath);
             if (m_FileSystems.ContainsKey(fullPath))
             {
-                throw new GameFrameworkException(Utility.Text.Format("File system '{0}' is already exist.", fullPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("File system '{0}' is already exist.", fullPath));
             }
 
             FileSystemStream fileSystemStream = m_FileSystemHelper.CreateFileSystemStream(fullPath, access, true);
             if (fileSystemStream == null)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Create file system stream for '{0}' failure.", fullPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Create file system stream for '{0}' failure.", fullPath));
             }
 
             FileSystem fileSystem = FileSystem.Create(fullPath, access, fileSystemStream, maxFileCount, maxBlockCount);
             if (fileSystem == null)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Create file system '{0}' failure.", fullPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Create file system '{0}' failure.", fullPath));
             }
 
             m_FileSystems.Add(fullPath, fileSystem);
@@ -204,20 +204,20 @@ namespace GameFramework.FileSystem
             fullPath = Utility.Path.GetRegularPath(fullPath);
             if (m_FileSystems.ContainsKey(fullPath))
             {
-                throw new GameFrameworkException(Utility.Text.Format("File system '{0}' is already exist.", fullPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("File system '{0}' is already exist.", fullPath));
             }
 
             FileSystemStream fileSystemStream = m_FileSystemHelper.CreateFileSystemStream(fullPath, access, false);
             if (fileSystemStream == null)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Create file system stream for '{0}' failure.", fullPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Create file system stream for '{0}' failure.", fullPath));
             }
 
             FileSystem fileSystem = FileSystem.Load(fullPath, access, fileSystemStream);
             if (fileSystem == null)
             {
                 fileSystemStream.Close();
-                throw new GameFrameworkException(Utility.Text.Format("Load file system '{0}' failure.", fullPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Load file system '{0}' failure.", fullPath));
             }
 
             m_FileSystems.Add(fullPath, fileSystem);

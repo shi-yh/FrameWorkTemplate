@@ -52,7 +52,7 @@ namespace UnityGameFramework.Editor.ResourceTools
         {
             get
             {
-                return Variant != null ? Utility.Text.Format("{0}.{1}", Name, Variant) : Name;
+                return Variant != null ? Utility.TextUtility.Format("{0}.{1}", Name, Variant) : Name;
             }
         }
 

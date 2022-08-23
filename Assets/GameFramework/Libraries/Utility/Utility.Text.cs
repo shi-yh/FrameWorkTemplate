@@ -5,6 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using System.Text.RegularExpressions;
+
 namespace GameFramework
 {
     public static partial class Utility
@@ -12,10 +14,23 @@ namespace GameFramework
         /// <summary>
         /// 字符相关的实用函数。
         /// </summary>
-        public static partial class Text
+        public static partial class TextUtility
         {
             private static ITextHelper s_TextHelper = null;
 
+            public static bool IsAllChinese(string str)
+            {
+                Regex reg = new Regex(@"^[\u4e00-\u9fa5]+$", RegexOptions.Multiline);
+                return reg.IsMatch(str);
+            }
+
+            public static bool HasChinese(string str)
+            {
+                Regex reg = new Regex(@"^.*[\u4e00-\u9fa5]{1,}.*$", RegexOptions.Multiline);
+                return reg.IsMatch(str);
+            }
+            
+            
             /// <summary>
             /// 设置字符辅助器。
             /// </summary>

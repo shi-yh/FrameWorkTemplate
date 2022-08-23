@@ -151,7 +151,7 @@ namespace GameFramework.Resource
                                 IFileSystem fileSystem = m_ResourceManager.GetFileSystem(ci.ReadWriteFileSystemName, false);
                                 if (!fileSystem.SaveAsFile(resourceFullName, resourcePath))
                                 {
-                                    throw new GameFrameworkException(Utility.Text.Format("Save as file '{0}' to '{1}' from file system '{2}' error.", resourceFullName, resourcePath, fileSystem.FullPath));
+                                    throw new GameFrameworkException(Utility.TextUtility.Format("Save as file '{0}' to '{1}' from file system '{2}' error.", resourceFullName, resourcePath, fileSystem.FullPath));
                                 }
 
                                 fileSystem.DeleteFile(resourceFullName);
@@ -162,7 +162,7 @@ namespace GameFramework.Resource
                                 IFileSystem fileSystem = m_ResourceManager.GetFileSystem(ci.FileSystemName, false);
                                 if (!fileSystem.WriteFile(resourceFullName, resourcePath))
                                 {
-                                    throw new GameFrameworkException(Utility.Text.Format("Write resource '{0}' to file system '{1}' error.", resourceFullName, fileSystem.FullPath));
+                                    throw new GameFrameworkException(Utility.TextUtility.Format("Write resource '{0}' to file system '{1}' error.", resourceFullName, fileSystem.FullPath));
                                 }
 
                                 if (File.Exists(resourcePath))
@@ -192,7 +192,7 @@ namespace GameFramework.Resource
                     }
                     else
                     {
-                        throw new GameFrameworkException(Utility.Text.Format("Check resources '{0}' error with unknown status.", ci.ResourceName.FullName));
+                        throw new GameFrameworkException(Utility.TextUtility.Format("Check resources '{0}' error with unknown status.", ci.ResourceName.FullName));
                     }
 
                     if (ci.NeedRemove)
@@ -348,7 +348,7 @@ namespace GameFramework.Resource
                         throw;
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Parse updatable version list exception '{0}'.", exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Parse updatable version list exception '{0}'.", exception), exception);
                 }
                 finally
                 {
@@ -362,7 +362,7 @@ namespace GameFramework.Resource
 
             private void OnLoadUpdatableVersionListFailure(string fileUri, string errorMessage, object userData)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Updatable version list '{0}' is invalid, error message is '{1}'.", fileUri, string.IsNullOrEmpty(errorMessage) ? "<Empty>" : errorMessage));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Updatable version list '{0}' is invalid, error message is '{1}'.", fileUri, string.IsNullOrEmpty(errorMessage) ? "<Empty>" : errorMessage));
             }
 
             private void OnLoadReadOnlyVersionListSuccess(string fileUri, byte[] bytes, float duration, object userData)
@@ -410,7 +410,7 @@ namespace GameFramework.Resource
                         throw;
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Parse read-only version list exception '{0}'.", exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Parse read-only version list exception '{0}'.", exception), exception);
                 }
                 finally
                 {
@@ -478,7 +478,7 @@ namespace GameFramework.Resource
                         throw;
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Parse read-write version list exception '{0}'.", exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Parse read-write version list exception '{0}'.", exception), exception);
                 }
                 finally
                 {

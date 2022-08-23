@@ -73,7 +73,7 @@ namespace UnityGameFramework.Runtime
 
             if (access != FileSystemAccess.Read)
             {
-                throw new GameFrameworkException(Utility.Text.Format("'{0}' is not supported in AndroidFileSystemStream.", access));
+                throw new GameFrameworkException(Utility.TextUtility.Format("'{0}' is not supported in AndroidFileSystemStream.", access));
             }
 
             if (createNew)
@@ -91,7 +91,7 @@ namespace UnityGameFramework.Runtime
             m_FileStream = InternalOpen(fileName);
             if (m_FileStream == null)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Open file '{0}' from Android asset manager failure.", fullPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Open file '{0}' from Android asset manager failure.", fullPath));
             }
 
             m_FileStreamRawObject = m_FileStream.GetRawObject();

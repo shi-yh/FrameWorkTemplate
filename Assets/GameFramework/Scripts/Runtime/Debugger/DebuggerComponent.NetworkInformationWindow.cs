@@ -44,17 +44,17 @@ namespace UnityGameFramework.Runtime
 
             private void DrawNetworkChannel(INetworkChannel networkChannel)
             {
-                GUILayout.Label(Utility.Text.Format("<b>Network Channel: {0} ({1})</b>", networkChannel.Name, networkChannel.Connected ? "Connected" : "Disconnected"));
+                GUILayout.Label(Utility.TextUtility.Format("<b>Network Channel: {0} ({1})</b>", networkChannel.Name, networkChannel.Connected ? "Connected" : "Disconnected"));
                 GUILayout.BeginVertical("box");
                 {
                     DrawItem("Service Type", networkChannel.ServiceType.ToString());
                     DrawItem("Address Family", networkChannel.AddressFamily.ToString());
                     DrawItem("Local Address", networkChannel.Connected ? networkChannel.Socket.LocalEndPoint.ToString() : "Unavailable");
                     DrawItem("Remote Address", networkChannel.Connected ? networkChannel.Socket.RemoteEndPoint.ToString() : "Unavailable");
-                    DrawItem("Send Packet", Utility.Text.Format("{0} / {1}", networkChannel.SendPacketCount, networkChannel.SentPacketCount));
-                    DrawItem("Receive Packet", Utility.Text.Format("{0} / {1}", networkChannel.ReceivePacketCount, networkChannel.ReceivedPacketCount));
+                    DrawItem("Send Packet", Utility.TextUtility.Format("{0} / {1}", networkChannel.SendPacketCount, networkChannel.SentPacketCount));
+                    DrawItem("Receive Packet", Utility.TextUtility.Format("{0} / {1}", networkChannel.ReceivePacketCount, networkChannel.ReceivedPacketCount));
                     DrawItem("Miss Heart Beat Count", networkChannel.MissHeartBeatCount.ToString());
-                    DrawItem("Heart Beat", Utility.Text.Format("{0:F2} / {1:F2}", networkChannel.HeartBeatElapseSeconds, networkChannel.HeartBeatInterval));
+                    DrawItem("Heart Beat", Utility.TextUtility.Format("{0:F2} / {1:F2}", networkChannel.HeartBeatElapseSeconds, networkChannel.HeartBeatInterval));
                     if (networkChannel.Connected)
                     {
                         if (GUILayout.Button("Disconnect", GUILayout.Height(30f)))

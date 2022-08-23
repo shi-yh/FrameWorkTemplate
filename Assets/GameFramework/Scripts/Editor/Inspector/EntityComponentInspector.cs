@@ -49,7 +49,7 @@ namespace UnityGameFramework.Editor
                 IEntityGroup[] entityGroups = t.GetAllEntityGroups();
                 foreach (IEntityGroup entityGroup in entityGroups)
                 {
-                    EditorGUILayout.LabelField(Utility.Text.Format("Entity Count ({0})", entityGroup.Name), entityGroup.EntityCount.ToString());
+                    EditorGUILayout.LabelField(Utility.TextUtility.Format("Entity Count ({0})", entityGroup.Name), entityGroup.EntityCount.ToString());
                 }
             }
 

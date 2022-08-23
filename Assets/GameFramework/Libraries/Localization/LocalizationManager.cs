@@ -332,7 +332,7 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             return value;
@@ -350,16 +350,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg);
+                return Utility.TextUtility.Format(value, arg);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3}", key, value, arg, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3}", key, value, arg, exception);
             }
         }
 
@@ -377,16 +377,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2);
+                return Utility.TextUtility.Format(value, arg1, arg2);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4}", key, value, arg1, arg2, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4}", key, value, arg1, arg2, exception);
             }
         }
 
@@ -406,16 +406,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5}", key, value, arg1, arg2, arg3, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5}", key, value, arg1, arg2, arg3, exception);
             }
         }
 
@@ -437,16 +437,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6}", key, value, arg1, arg2, arg3, arg4, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6}", key, value, arg1, arg2, arg3, arg4, exception);
             }
         }
 
@@ -470,16 +470,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7}", key, value, arg1, arg2, arg3, arg4, arg5, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7}", key, value, arg1, arg2, arg3, arg4, arg5, exception);
             }
         }
 
@@ -505,16 +505,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, exception);
             }
         }
 
@@ -542,16 +542,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, exception);
             }
         }
 
@@ -581,16 +581,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, exception);
             }
         }
 
@@ -622,16 +622,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, exception);
             }
         }
 
@@ -665,16 +665,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, exception);
             }
         }
 
@@ -710,16 +710,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, exception);
             }
         }
 
@@ -757,16 +757,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, exception);
             }
         }
 
@@ -806,16 +806,16 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
             }
             catch (Exception exception)
             {
-                return Utility.Text.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, exception);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15}", key, value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, exception);
             }
         }
 
@@ -857,17 +857,17 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
             }
             catch (Exception exception)
             {
-                string args = Utility.Text.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13}", arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
-                return Utility.Text.Format("<Error>{0},{1},{2},{3}", key, value, args, exception);
+                string args = Utility.TextUtility.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13}", arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3}", key, value, args, exception);
             }
         }
 
@@ -911,17 +911,17 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
             }
             catch (Exception exception)
             {
-                string args = Utility.Text.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14}", arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
-                return Utility.Text.Format("<Error>{0},{1},{2},{3}", key, value, args, exception);
+                string args = Utility.TextUtility.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14}", arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3}", key, value, args, exception);
             }
         }
 
@@ -967,17 +967,17 @@ namespace GameFramework.Localization
             string value = GetRawString(key);
             if (value == null)
             {
-                return Utility.Text.Format("<NoKey>{0}", key);
+                return Utility.TextUtility.Format("<NoKey>{0}", key);
             }
 
             try
             {
-                return Utility.Text.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
+                return Utility.TextUtility.Format(value, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
             }
             catch (Exception exception)
             {
-                string args = Utility.Text.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15}", arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
-                return Utility.Text.Format("<Error>{0},{1},{2},{3}", key, value, args, exception);
+                string args = Utility.TextUtility.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15}", arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
+                return Utility.TextUtility.Format("<Error>{0},{1},{2},{3}", key, value, args, exception);
             }
         }
 

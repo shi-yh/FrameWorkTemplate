@@ -2,20 +2,133 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aba6f01-e241-4431-9c25-fc75968409d2" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.bytes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRAsteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRAsteroid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/DataProvider/DataProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/DataProvider/DataProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/DataStruct/TypeNamePair.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/DataStruct/TypeNamePair.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/EventPool/EventPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/EventPool/EventPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/GameFrameworkEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/GameFrameworkEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/GameFrameworkSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/GameFrameworkSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/Log/GameFrameworkLog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/Log/GameFrameworkLog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/ReferencePool/ReferencePool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Base/ReferencePool/ReferencePool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Config/ConfigManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Config/ConfigManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataNode/DataNodeManager.DataNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataNode/DataNodeManager.DataNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataNode/DataNodeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataNode/DataNodeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataTable/DataTableManager.DataTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataTable/DataTableManager.DataTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataTable/DataTableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/DataTable/DataTableManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Download/DownloadManager.DownloadAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Download/DownloadManager.DownloadAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Entity/EntityManager.EntityGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Entity/EntityManager.EntityGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Entity/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Entity/EntityManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/FileSystem/FileSystem.StringData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/FileSystem/FileSystem.StringData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/FileSystem/FileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/FileSystem/FileSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/FileSystem/FileSystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/FileSystem/FileSystemManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Fsm/Fsm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Fsm/Fsm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Fsm/FsmManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Fsm/FsmManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Fsm/FsmState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Fsm/FsmState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Network/NetworkManager.NetworkChannelBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Network/NetworkManager.NetworkChannelBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Network/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Network/NetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectPoolManager.Object.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectPoolManager.Object.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectPoolManager.ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectPoolManager.ObjectPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/ObjectPool/ObjectPoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceChecker.CheckInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceChecker.CheckInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceGroupCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceGroupCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceIniter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceIniter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.AssetObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.AssetObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.LoadDependencyAssetTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.LoadDependencyAssetTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.LoadResourceAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.LoadResourceAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.ResourceObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.ResourceObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceUpdater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceVerifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.ResourceVerifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.VersionListProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.VersionListProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Resource/ResourceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Scene/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Scene/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Sound/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Sound/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/UI/UIManager.UIGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/UI/UIManager.UIGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Assembly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Assembly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Compression.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Compression.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Json.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Json.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Text.ITextHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Text.ITextHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Text.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Text.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/BaseComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/BaseComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/DataTableComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/DataTableComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/DownloadComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/DownloadComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/EntityComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/EntityComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/FileSystemComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/FileSystemComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/FsmComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/FsmComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/NetworkComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/NetworkComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/ObjectPoolComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/ObjectPoolComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/ReferencePoolComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/ReferencePoolComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/ResourceComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/ResourceComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/WebRequestComponentInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Inspector/WebRequestComponentInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Misc/HelperInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Misc/HelperInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Misc/OpenFolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/Misc/OpenFolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceAnalyzer/ResourceAnalyzer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceAnalyzer/ResourceAnalyzer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceAnalyzer/ResourceAnalyzerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceAnalyzer/ResourceAnalyzerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceBuilder/ResourceBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceBuilder/ResourceBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceBuilder/ResourceBuilderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceBuilder/ResourceBuilderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceCollection/Resource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceCollection/Resource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceCollection/ResourceCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceCollection/ResourceCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/ResourceEditor.ResourceFolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/ResourceEditor.ResourceFolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/ResourceEditor.ResourceItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/ResourceEditor.ResourceItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/ResourceEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/ResourceEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/SourceAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/SourceAsset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/SourceFolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceEditor/SourceFolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourcePackBuilder/ResourcePackBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourcePackBuilder/ResourcePackBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourcePackBuilder/ResourcePackBuilderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourcePackBuilder/ResourcePackBuilderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceSyncTools/ResourceSyncTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/ResourceSyncTools/ResourceSyncTools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Base/BaseComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Base/BaseComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ConsoleWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ConsoleWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.EnvironmentInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.EnvironmentInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.GraphicsInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.GraphicsInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.InputAccelerationInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.InputAccelerationInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.InputTouchInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.InputTouchInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.NetworkInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.NetworkInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ObjectPoolInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ObjectPoolInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ProfilerInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ProfilerInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.QualityInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.QualityInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ReferencePoolInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ReferencePoolInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.RuntimeMemoryInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.RuntimeMemoryInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.RuntimeMemorySummaryWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.RuntimeMemorySummaryWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ScreenInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ScreenInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ScrollableDebuggerWindowBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.ScrollableDebuggerWindowBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.SystemInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.SystemInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.TimeInformationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.TimeInformationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Debugger/DebuggerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Download/DownloadComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Download/DownloadComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Download/UnityWebRequestDownloadAgentHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Download/UnityWebRequestDownloadAgentHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/FileSystem/AndroidFileSystemStream.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/FileSystem/AndroidFileSystemStream.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/DefaultLoadResourceAgentHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/DefaultLoadResourceAgentHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/EditorResourceComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/EditorResourceComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/ResourceComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/ResourceComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Sound/SoundComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Sound/SoundComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/UIComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/UIComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Utility/BinaryExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Utility/BinaryExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Utility/DefaultLogHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Utility/DefaultLogHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Utility/DefaultTextHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Utility/DefaultTextHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/WebRequest/WebRequestComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/WebRequest/WebRequestComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.DataProcessorUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.DataProcessorUtility.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityLogic/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityLogic/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureChangeScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureChangeScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureCheckVersion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureCheckVersion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureUpdateResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureUpdateResources.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Sound/SoundExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Sound/SoundExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Launcher.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Launcher.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,24 +147,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3EC1164-F0BC-4447-925E-02C351F0CD64/bb/b7eca2e1/XmlDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugin/BoltCoreMigration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.State/States/StateWidget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E40E5A8F-982C-4B61-8A93-0D29F9BD091C/e8/6953e8b5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/PlasticSCM/Views/IncomingChanges/Gluon/IncomingChangesTreeHeaderState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/cc/fdd5a6cb/StringComparison.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity 2021.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/MenuOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/ac/83e4539b/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Editor/CustomEditors/MarkerTrackEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/ScriptReferenceResolver.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/b0/a44d0abb/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Flow/Options/UnitBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/PlasticSCM/Views/IncomingChanges/Developer/IncomingChangesTab.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BBAE6AF5-2A2A-4BD9-82F8-FDE9721D2C3B/0c/d97287b8/Regex.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/EditorGameService/EditorGameServiceRemoteConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/92/36047f2e/IDictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.State/Transitions/StateTransitionWidget.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,11 +175,16 @@
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/EditorResourceComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultConfig.txt" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Config/DefaultConfigHelper.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/ConfigProcessor.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LocalizationGenerator/LanguageText.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Text.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2DWYKAnp4UR8hbOvY6qWj9cxRde" />
@@ -80,7 +194,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34669557" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -108,10 +222,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11656">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19008">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11656" />
+      <option name="pid" value="19008" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -129,7 +243,8 @@
       <updated>1660816242310</updated>
       <workItem from="1660816254747" duration="9000" />
       <workItem from="1660876801465" duration="11948000" />
-      <workItem from="1661149212606" duration="13068000" />
+      <workItem from="1661149212606" duration="13342000" />
+      <workItem from="1661237272650" duration="8819000" />
     </task>
     <servers />
   </component>
@@ -171,10 +286,10 @@
           <line>28</line>
           <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableGeneratorMenu.cs" initialLine="28" containingFunctionPresentation="method 'GenerateDataTables'">
             <startOffsets>
-              <option value="1049" />
+              <option value="1056" />
             </startOffsets>
             <endOffsets>
-              <option value="1120" />
+              <option value="1127" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
@@ -184,10 +299,10 @@
           <line>443</line>
           <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="440" containingFunctionPresentation="method 'GenerateDataFile'">
             <startOffsets>
-              <option value="15621" />
+              <option value="15831" />
             </startOffsets>
             <endOffsets>
-              <option value="15646" />
+              <option value="15856" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="22" />
@@ -197,10 +312,10 @@
           <line>531</line>
           <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="528" containingFunctionPresentation="method 'GetRowBytes'">
             <startOffsets>
-              <option value="19019" />
+              <option value="19271" />
             </startOffsets>
             <endOffsets>
-              <option value="19050" />
+              <option value="19302" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="23" />
@@ -210,26 +325,39 @@
           <line>538</line>
           <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="535" containingFunctionPresentation="method 'GetRowBytes'">
             <startOffsets>
-              <option value="19224" />
+              <option value="19476" />
             </startOffsets>
             <endOffsets>
-              <option value="19314" />
+              <option value="19566" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Config/DefaultConfigHelper.cs</url>
-          <line>103</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameFramework\Scripts\Runtime\Config\DefaultConfigHelper.cs" initialLine="103" containingFunctionPresentation="method 'ParseData'">
+          <url>file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/LocalizationComponent.cs</url>
+          <line>96</line>
+          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameFramework\Scripts\Runtime\Localization\LocalizationComponent.cs" initialLine="96" containingFunctionPresentation="method 'Awake'">
             <startOffsets>
-              <option value="4045" />
+              <option value="2477" />
             </startOffsets>
             <endOffsets>
-              <option value="4080" />
+              <option value="2554" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs</url>
+          <line>34</line>
+          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Localization\LanguageText.cs" initialLine="25" containingFunctionPresentation="method 'Awake'">
+            <startOffsets>
+              <option value="700" />
+            </startOffsets>
+            <endOffsets>
+              <option value="716" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

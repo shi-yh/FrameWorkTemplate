@@ -120,7 +120,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     string[] resourceGroups = xmlNode.Attributes.GetNamedItem("ResourceGroups") != null ? xmlNode.Attributes.GetNamedItem("ResourceGroups").Value.Split(',') : null;
                     if (!AddResource(name, variant, fileSystem, (LoadType)loadType, packed, resourceGroups))
                     {
-                        Debug.LogWarning(Utility.Text.Format("Can not add resource '{0}'.", GetResourceFullName(name, variant)));
+                        Debug.LogWarning(Utility.TextUtility.Format("Can not add resource '{0}'.", GetResourceFullName(name, variant)));
                         continue;
                     }
                 }
@@ -145,7 +145,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     string variant = xmlNode.Attributes.GetNamedItem("ResourceVariant") != null ? xmlNode.Attributes.GetNamedItem("ResourceVariant").Value : null;
                     if (!AssignAsset(guid, name, variant))
                     {
-                        Debug.LogWarning(Utility.Text.Format("Can not assign asset '{0}' to resource '{1}'.", guid, GetResourceFullName(name, variant)));
+                        Debug.LogWarning(Utility.TextUtility.Format("Can not assign asset '{0}' to resource '{1}'.", guid, GetResourceFullName(name, variant)));
                         continue;
                     }
                 }
@@ -548,7 +548,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private string GetResourceFullName(string name, string variant)
         {
-            return !string.IsNullOrEmpty(variant) ? Utility.Text.Format("{0}.{1}", name, variant) : name;
+            return !string.IsNullOrEmpty(variant) ? Utility.TextUtility.Format("{0}.{1}", name, variant) : name;
         }
 
         private bool IsValidResourceName(string name, string variant)

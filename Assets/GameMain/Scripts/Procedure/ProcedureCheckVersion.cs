@@ -40,7 +40,7 @@ namespace StarForce
             GameEntry.Event.Subscribe(WebRequestFailureEventArgs.EventId, OnWebRequestFailure);
 
             // 向服务器请求版本信息
-            GameEntry.WebRequest.AddWebRequest(Utility.Text.Format(GameEntry.BuiltinData.BuildInfo.CheckVersionUrl, GetPlatformPath()), this);
+            GameEntry.WebRequest.AddWebRequest(Utility.TextUtility.Format(GameEntry.BuiltinData.BuildInfo.CheckVersionUrl, GetPlatformPath()), this);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -166,7 +166,7 @@ namespace StarForce
                     return "Android";
 
                 default:
-                    throw new System.NotSupportedException(Utility.Text.Format("Platform '{0}' is not supported.", Application.platform));
+                    throw new System.NotSupportedException(Utility.TextUtility.Format("Platform '{0}' is not supported.", Application.platform));
             }
         }
     }

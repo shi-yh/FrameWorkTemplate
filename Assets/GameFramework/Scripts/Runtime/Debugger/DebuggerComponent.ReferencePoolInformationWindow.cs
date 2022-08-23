@@ -53,7 +53,7 @@ namespace UnityGameFramework.Runtime
 
                 foreach (KeyValuePair<string, List<ReferencePoolInfo>> assemblyReferencePoolInfo in m_ReferencePoolInfos)
                 {
-                    GUILayout.Label(Utility.Text.Format("<b>Assembly: {0}</b>", assemblyReferencePoolInfo.Key));
+                    GUILayout.Label(Utility.TextUtility.Format("<b>Assembly: {0}</b>", assemblyReferencePoolInfo.Key));
                     GUILayout.BeginVertical("box");
                     {
                         GUILayout.BeginHorizontal();

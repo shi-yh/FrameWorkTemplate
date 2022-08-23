@@ -818,7 +818,7 @@ namespace GameFramework.FileSystem
 
             if (name.Length > byte.MaxValue)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Name '{0}' is too long.", name));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Name '{0}' is too long.", name));
             }
 
             if (buffer == null)
@@ -880,7 +880,7 @@ namespace GameFramework.FileSystem
 
             if (name.Length > byte.MaxValue)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Name '{0}' is too long.", name));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Name '{0}' is too long.", name));
             }
 
             if (stream == null)
@@ -1025,7 +1025,7 @@ namespace GameFramework.FileSystem
 
             if (newName.Length > byte.MaxValue)
             {
-                throw new GameFrameworkException(Utility.Text.Format("New name '{0}' is too long.", newName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("New name '{0}' is too long.", newName));
             }
 
             if (oldName == newName)

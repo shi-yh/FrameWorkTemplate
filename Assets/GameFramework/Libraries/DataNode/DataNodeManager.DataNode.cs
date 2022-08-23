@@ -68,7 +68,7 @@ namespace GameFramework.DataNode
             {
                 get
                 {
-                    return m_Parent == null ? m_Name : Utility.Text.Format("{0}{1}{2}", m_Parent.FullName, PathSplitSeparator[0], m_Name);
+                    return m_Parent == null ? m_Name : Utility.TextUtility.Format("{0}{1}{2}", m_Parent.FullName, PathSplitSeparator[0], m_Name);
                 }
             }
 
@@ -332,7 +332,7 @@ namespace GameFramework.DataNode
             /// <returns>数据结点字符串。</returns>
             public override string ToString()
             {
-                return Utility.Text.Format("{0}: {1}", FullName, ToDataString());
+                return Utility.TextUtility.Format("{0}: {1}", FullName, ToDataString());
             }
 
             /// <summary>
@@ -346,7 +346,7 @@ namespace GameFramework.DataNode
                     return "<Null>";
                 }
 
-                return Utility.Text.Format("[{0}] {1}", m_Data.Type.Name, m_Data);
+                return Utility.TextUtility.Format("[{0}] {1}", m_Data.Type.Name, m_Data);
             }
 
             /// <summary>

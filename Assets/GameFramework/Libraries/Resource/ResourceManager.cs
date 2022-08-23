@@ -1253,7 +1253,7 @@ namespace GameFramework.Resource
 
             if (!File.Exists(resourcePackPath))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Resource pack '{0}' is not exist.", resourcePackPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Resource pack '{0}' is not exist.", resourcePackPath));
             }
 
             if (applyResourcesCompleteCallback == null)
@@ -1319,7 +1319,7 @@ namespace GameFramework.Resource
             ResourceGroup resourceGroup = (ResourceGroup)GetResourceGroup(resourceGroupName);
             if (resourceGroup == null)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Can not find resource group '{0}'.", resourceGroupName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Can not find resource group '{0}'.", resourceGroupName));
             }
 
             m_UpdateResourcesCompleteCallback = updateResourcesCompleteCallback;
@@ -1364,7 +1364,7 @@ namespace GameFramework.Resource
 
             if (!File.Exists(resourcePackPath))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Resource pack '{0}' is not exist.", resourcePackPath));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Resource pack '{0}' is not exist.", resourcePackPath));
             }
 
             if (m_ResourceMode == ResourceMode.Unspecified)
@@ -2193,7 +2193,7 @@ namespace GameFramework.Resource
                 resourceGroups[i] = (ResourceGroup)GetResourceGroup(resourceGroupNames[i]);
                 if (resourceGroups[i] == null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Resource group '{0}' is not exist.", resourceGroupNames[i]));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Resource group '{0}' is not exist.", resourceGroupNames[i]));
                 }
             }
 
@@ -2223,7 +2223,7 @@ namespace GameFramework.Resource
                 resourceGroups[i] = (ResourceGroup)GetResourceGroup(resourceGroupNames[i]);
                 if (resourceGroups[i] == null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Resource group '{0}' is not exist.", resourceGroupNames[i]));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Resource group '{0}' is not exist.", resourceGroupNames[i]));
                 }
             }
 
@@ -2301,7 +2301,7 @@ namespace GameFramework.Resource
             {
                 if (!m_ReadOnlyFileSystems.TryGetValue(fileSystemName, out fileSystem))
                 {
-                    string fullPath = Utility.Path.GetRegularPath(Path.Combine(m_ReadOnlyPath, Utility.Text.Format("{0}.{1}", fileSystemName, DefaultExtension)));
+                    string fullPath = Utility.Path.GetRegularPath(Path.Combine(m_ReadOnlyPath, Utility.TextUtility.Format("{0}.{1}", fileSystemName, DefaultExtension)));
                     fileSystem = m_FileSystemManager.GetFileSystem(fullPath);
                     if (fileSystem == null)
                     {
@@ -2314,7 +2314,7 @@ namespace GameFramework.Resource
             {
                 if (!m_ReadWriteFileSystems.TryGetValue(fileSystemName, out fileSystem))
                 {
-                    string fullPath = Utility.Path.GetRegularPath(Path.Combine(m_ReadWritePath, Utility.Text.Format("{0}.{1}", fileSystemName, DefaultExtension)));
+                    string fullPath = Utility.Path.GetRegularPath(Path.Combine(m_ReadWritePath, Utility.TextUtility.Format("{0}.{1}", fileSystemName, DefaultExtension)));
                     fileSystem = m_FileSystemManager.GetFileSystem(fullPath);
                     if (fileSystem == null)
                     {

@@ -108,7 +108,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 EditorGUILayout.BeginVertical(GUILayout.Width(position.width * 0.25f));
                 {
                     GUILayout.Space(5f);
-                    EditorGUILayout.LabelField(Utility.Text.Format("Resource List ({0})", m_Controller.ResourceCount), EditorStyles.boldLabel);
+                    EditorGUILayout.LabelField(Utility.TextUtility.Format("Resource List ({0})", m_Controller.ResourceCount), EditorStyles.boldLabel);
                     EditorGUILayout.BeginHorizontal("box", GUILayout.Height(position.height - 52f));
                     {
                         DrawResourcesView();
@@ -125,7 +125,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 EditorGUILayout.BeginVertical(GUILayout.Width(position.width * 0.25f));
                 {
                     GUILayout.Space(5f);
-                    EditorGUILayout.LabelField(Utility.Text.Format("Resource Content ({0})", m_CurrentResourceContentCount), EditorStyles.boldLabel);
+                    EditorGUILayout.LabelField(Utility.TextUtility.Format("Resource Content ({0})", m_CurrentResourceContentCount), EditorStyles.boldLabel);
                     EditorGUILayout.BeginHorizontal("box", GUILayout.Height(position.height - 52f));
                     {
                         DrawResourceView();
@@ -389,7 +389,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 return;
             }
 
-            GUILayout.Label(Utility.Text.Format("Remove '{0}' ?", m_SelectedResource.FullName));
+            GUILayout.Label(Utility.TextUtility.Format("Remove '{0}' ?", m_SelectedResource.FullName));
 
             if (GUILayout.Button("Yes", GUILayout.Width(50f)))
             {
@@ -467,7 +467,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             GUILayout.Label(string.Empty);
             EditorGUI.BeginDisabledGroup(m_SelectedResource == null || m_SelectedAssetsInSelectedResource.Count <= 0);
             {
-                if (GUILayout.Button(Utility.Text.Format("{0} >>", m_SelectedAssetsInSelectedResource.Count), GUILayout.Width(80f)))
+                if (GUILayout.Button(Utility.TextUtility.Format("{0} >>", m_SelectedAssetsInSelectedResource.Count), GUILayout.Width(80f)))
                 {
                     foreach (Asset asset in m_SelectedAssetsInSelectedResource)
                     {
@@ -495,7 +495,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             HashSet<SourceAsset> selectedSourceAssets = GetSelectedSourceAssets();
             EditorGUI.BeginDisabledGroup(m_SelectedResource == null || selectedSourceAssets.Count <= 0);
             {
-                if (GUILayout.Button(Utility.Text.Format("<< {0}", selectedSourceAssets.Count), GUILayout.Width(80f)))
+                if (GUILayout.Button(Utility.TextUtility.Format("<< {0}", selectedSourceAssets.Count), GUILayout.Width(80f)))
                 {
                     foreach (SourceAsset sourceAsset in selectedSourceAssets)
                     {
@@ -509,13 +509,13 @@ namespace UnityGameFramework.Editor.ResourceTools
             EditorGUI.EndDisabledGroup();
             EditorGUI.BeginDisabledGroup(selectedSourceAssets.Count <= 0);
             {
-                if (GUILayout.Button(Utility.Text.Format("<<< {0}", selectedSourceAssets.Count), GUILayout.Width(80f)))
+                if (GUILayout.Button(Utility.TextUtility.Format("<<< {0}", selectedSourceAssets.Count), GUILayout.Width(80f)))
                 {
                     int index = 0;
                     int count = selectedSourceAssets.Count;
                     foreach (SourceAsset sourceAsset in selectedSourceAssets)
                     {
-                        EditorUtility.DisplayProgressBar("Add Resources", Utility.Text.Format("{0}/{1} processing...", ++index, count), (float)index / count);
+                        EditorUtility.DisplayProgressBar("Add Resources", Utility.TextUtility.Format("{0}/{1} processing...", ++index, count), (float)index / count);
                         int dotIndex = sourceAsset.FromRootPath.IndexOf('.');
                         string name = dotIndex > 0 ? sourceAsset.FromRootPath.Substring(0, dotIndex) : sourceAsset.FromRootPath;
                         AddResource(name, null, false);
@@ -688,12 +688,12 @@ namespace UnityGameFramework.Editor.ResourceTools
                     RefreshResourceTree();
                 }
 
-                Debug.Log(Utility.Text.Format("Add resource '{0}' success.", fullName));
+                Debug.Log(Utility.TextUtility.Format("Add resource '{0}' success.", fullName));
                 m_MenuState = MenuState.Normal;
             }
             else
             {
-                Debug.LogWarning(Utility.Text.Format("Add resource '{0}' failure.", fullName));
+                Debug.LogWarning(Utility.TextUtility.Format("Add resource '{0}' failure.", fullName));
             }
         }
 
@@ -715,12 +715,12 @@ namespace UnityGameFramework.Editor.ResourceTools
             if (m_Controller.RenameResource(resource.Name, resource.Variant, newName, newVariant))
             {
                 RefreshResourceTree();
-                Debug.Log(Utility.Text.Format("Rename resource '{0}' to '{1}' success.", oldFullName, newFullName));
+                Debug.Log(Utility.TextUtility.Format("Rename resource '{0}' to '{1}' success.", oldFullName, newFullName));
                 m_MenuState = MenuState.Normal;
             }
             else
             {
-                Debug.LogWarning(Utility.Text.Format("Rename resource '{0}' to '{1}' failure.", oldFullName, newFullName));
+                Debug.LogWarning(Utility.TextUtility.Format("Rename resource '{0}' to '{1}' failure.", oldFullName, newFullName));
             }
         }
 
@@ -731,11 +731,11 @@ namespace UnityGameFramework.Editor.ResourceTools
             {
                 ChangeSelectedResource(null);
                 RefreshResourceTree();
-                Debug.Log(Utility.Text.Format("Remove resource '{0}' success.", fullName));
+                Debug.Log(Utility.TextUtility.Format("Remove resource '{0}' success.", fullName));
             }
             else
             {
-                Debug.LogWarning(Utility.Text.Format("Remove resource '{0}' failure.", fullName));
+                Debug.LogWarning(Utility.TextUtility.Format("Remove resource '{0}' failure.", fullName));
             }
         }
 
@@ -744,11 +744,11 @@ namespace UnityGameFramework.Editor.ResourceTools
             string fullName = m_SelectedResource.FullName;
             if (m_Controller.SetResourceLoadType(m_SelectedResource.Name, m_SelectedResource.Variant, loadType))
             {
-                Debug.Log(Utility.Text.Format("Set resource '{0}' load type to '{1}' success.", fullName, loadType));
+                Debug.Log(Utility.TextUtility.Format("Set resource '{0}' load type to '{1}' success.", fullName, loadType));
             }
             else
             {
-                Debug.LogWarning(Utility.Text.Format("Set resource '{0}' load type to '{1}' failure.", fullName, loadType));
+                Debug.LogWarning(Utility.TextUtility.Format("Set resource '{0}' load type to '{1}' failure.", fullName, loadType));
             }
         }
 
@@ -757,11 +757,11 @@ namespace UnityGameFramework.Editor.ResourceTools
             string fullName = m_SelectedResource.FullName;
             if (m_Controller.SetResourcePacked(m_SelectedResource.Name, m_SelectedResource.Variant, packed))
             {
-                Debug.Log(Utility.Text.Format("{1} resource '{0}' success.", fullName, packed ? "Pack" : "Unpack"));
+                Debug.Log(Utility.TextUtility.Format("{1} resource '{0}' success.", fullName, packed ? "Pack" : "Unpack"));
             }
             else
             {
-                Debug.LogWarning(Utility.Text.Format("{1} resource '{0}' failure.", fullName, packed ? "Pack" : "Unpack"));
+                Debug.LogWarning(Utility.TextUtility.Format("{1} resource '{0}' failure.", fullName, packed ? "Pack" : "Unpack"));
             }
         }
 
@@ -769,7 +769,7 @@ namespace UnityGameFramework.Editor.ResourceTools
         {
             if (!m_Controller.AssignAsset(sourceAsset.Guid, resource.Name, resource.Variant))
             {
-                Debug.LogWarning(Utility.Text.Format("Assign asset '{0}' to resource '{1}' failure.", sourceAsset.Name, resource.FullName));
+                Debug.LogWarning(Utility.TextUtility.Format("Assign asset '{0}' to resource '{1}' failure.", sourceAsset.Name, resource.FullName));
             }
         }
 
@@ -777,7 +777,7 @@ namespace UnityGameFramework.Editor.ResourceTools
         {
             if (!m_Controller.UnassignAsset(asset.Guid))
             {
-                Debug.LogWarning(Utility.Text.Format("Unassign asset '{0}' from resource '{1}' failure.", asset.Guid, m_SelectedResource.FullName));
+                Debug.LogWarning(Utility.TextUtility.Format("Unassign asset '{0}' from resource '{1}' failure.", asset.Guid, m_SelectedResource.FullName));
             }
         }
 
@@ -787,7 +787,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             int unusedResourceCount = m_Controller.RemoveUnusedResources();
             RefreshResourceTree();
 
-            Debug.Log(Utility.Text.Format("Clean complete, {0} unknown assets and {1} unused resources has been removed.", unknownAssetCount, unusedResourceCount));
+            Debug.Log(Utility.TextUtility.Format("Clean complete, {0} unknown assets and {1} unused resources has been removed.", unknownAssetCount, unusedResourceCount));
         }
 
         private void RefreshResourceTree()
@@ -804,7 +804,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     folder = subFolder == null ? folder.AddFolder(splitedPath[i]) : subFolder;
                 }
 
-                string fullName = resource.Variant != null ? Utility.Text.Format("{0}.{1}", splitedPath[splitedPath.Length - 1], resource.Variant) : splitedPath[splitedPath.Length - 1];
+                string fullName = resource.Variant != null ? Utility.TextUtility.Format("{0}.{1}", splitedPath[splitedPath.Length - 1], resource.Variant) : splitedPath[splitedPath.Length - 1];
                 folder.AddItem(fullName, resource);
             }
         }
@@ -1053,17 +1053,17 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private string GetResourceFullName(string name, string variant)
         {
-            return variant != null ? Utility.Text.Format("{0}.{1}", name, variant) : name;
+            return variant != null ? Utility.TextUtility.Format("{0}.{1}", name, variant) : name;
         }
 
         private void OnLoadingResource(int index, int count)
         {
-            EditorUtility.DisplayProgressBar("Loading Resources", Utility.Text.Format("Loading resources, {0}/{1} loaded.", index, count), (float)index / count);
+            EditorUtility.DisplayProgressBar("Loading Resources", Utility.TextUtility.Format("Loading resources, {0}/{1} loaded.", index, count), (float)index / count);
         }
 
         private void OnLoadingAsset(int index, int count)
         {
-            EditorUtility.DisplayProgressBar("Loading Assets", Utility.Text.Format("Loading assets, {0}/{1} loaded.", index, count), (float)index / count);
+            EditorUtility.DisplayProgressBar("Loading Assets", Utility.TextUtility.Format("Loading assets, {0}/{1} loaded.", index, count), (float)index / count);
         }
 
         private void OnLoadCompleted()

@@ -251,7 +251,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     EditorGUILayout.BeginHorizontal();
                     {
                         EditorGUILayout.LabelField("Resource Version", GUILayout.Width(160f));
-                        GUILayout.Label(Utility.Text.Format("{0} ({1})", m_Controller.ApplicableGameVersion, m_Controller.InternalResourceVersion));
+                        GUILayout.Label(Utility.TextUtility.Format("{0} ({1})", m_Controller.ApplicableGameVersion, m_Controller.InternalResourceVersion));
                     }
                     EditorGUILayout.EndHorizontal();
                     EditorGUILayout.BeginHorizontal();
@@ -381,7 +381,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             messageType = MessageType.Info;
             if (Directory.Exists(m_Controller.OutputPackagePath))
             {
-                message += Utility.Text.Format("{0} will be overwritten.", m_Controller.OutputPackagePath);
+                message += Utility.TextUtility.Format("{0} will be overwritten.", m_Controller.OutputPackagePath);
                 messageType = MessageType.Warning;
             }
 
@@ -392,7 +392,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     message += " ";
                 }
 
-                message += Utility.Text.Format("{0} will be overwritten.", m_Controller.OutputFullPath);
+                message += Utility.TextUtility.Format("{0} will be overwritten.", m_Controller.OutputFullPath);
                 messageType = MessageType.Warning;
             }
 
@@ -403,7 +403,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     message += " ";
                 }
 
-                message += Utility.Text.Format("{0} will be overwritten.", m_Controller.OutputPackedPath);
+                message += Utility.TextUtility.Format("{0} will be overwritten.", m_Controller.OutputPackedPath);
                 messageType = MessageType.Warning;
             }
 
@@ -447,12 +447,12 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private void OnLoadingResource(int index, int count)
         {
-            EditorUtility.DisplayProgressBar("Loading Resources", Utility.Text.Format("Loading resources, {0}/{1} loaded.", index, count), (float)index / count);
+            EditorUtility.DisplayProgressBar("Loading Resources", Utility.TextUtility.Format("Loading resources, {0}/{1} loaded.", index, count), (float)index / count);
         }
 
         private void OnLoadingAsset(int index, int count)
         {
-            EditorUtility.DisplayProgressBar("Loading Assets", Utility.Text.Format("Loading assets, {0}/{1} loaded.", index, count), (float)index / count);
+            EditorUtility.DisplayProgressBar("Loading Assets", Utility.TextUtility.Format("Loading assets, {0}/{1} loaded.", index, count), (float)index / count);
         }
 
         private void OnLoadCompleted()
@@ -462,7 +462,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private void OnAnalyzingAsset(int index, int count)
         {
-            EditorUtility.DisplayProgressBar("Analyzing Assets", Utility.Text.Format("Analyzing assets, {0}/{1} analyzed.", index, count), (float)index / count);
+            EditorUtility.DisplayProgressBar("Analyzing Assets", Utility.TextUtility.Format("Analyzing assets, {0}/{1} analyzed.", index, count), (float)index / count);
         }
 
         private void OnAnalyzeCompleted()
@@ -472,7 +472,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private bool OnProcessingAssetBundle(string assetBundleName, float progress)
         {
-            if (EditorUtility.DisplayCancelableProgressBar("Processing AssetBundle", Utility.Text.Format("Processing '{0}'...", assetBundleName), progress))
+            if (EditorUtility.DisplayCancelableProgressBar("Processing AssetBundle", Utility.TextUtility.Format("Processing '{0}'...", assetBundleName), progress))
             {
                 EditorUtility.ClearProgressBar();
                 return true;
@@ -486,7 +486,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private bool OnProcessingBinary(string binaryName, float progress)
         {
-            if (EditorUtility.DisplayCancelableProgressBar("Processing Binary", Utility.Text.Format("Processing '{0}'...", binaryName), progress))
+            if (EditorUtility.DisplayCancelableProgressBar("Processing Binary", Utility.TextUtility.Format("Processing '{0}'...", binaryName), progress))
             {
                 EditorUtility.ClearProgressBar();
                 return true;
@@ -501,13 +501,13 @@ namespace UnityGameFramework.Editor.ResourceTools
         private void OnProcessResourceComplete(Platform platform)
         {
             EditorUtility.ClearProgressBar();
-            Debug.Log(Utility.Text.Format("Build resources for '{0}' complete.", platform));
+            Debug.Log(Utility.TextUtility.Format("Build resources for '{0}' complete.", platform));
         }
 
         private void OnBuildResourceError(string errorMessage)
         {
             EditorUtility.ClearProgressBar();
-            Debug.LogWarning(Utility.Text.Format("Build resources error with error message '{0}'.", errorMessage));
+            Debug.LogWarning(Utility.TextUtility.Format("Build resources error with error message '{0}'.", errorMessage));
         }
     }
 }

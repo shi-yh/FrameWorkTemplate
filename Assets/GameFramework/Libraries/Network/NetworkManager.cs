@@ -236,7 +236,7 @@ namespace GameFramework.Network
 
             if (HasNetworkChannel(name))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Already exist network channel '{0}'.", name ?? string.Empty));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Already exist network channel '{0}'.", name ?? string.Empty));
             }
 
             NetworkChannelBase networkChannel = null;
@@ -251,7 +251,7 @@ namespace GameFramework.Network
                     break;
 
                 default:
-                    throw new GameFrameworkException(Utility.Text.Format("Not supported service type '{0}'.", serviceType));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Not supported service type '{0}'.", serviceType));
             }
 
             networkChannel.NetworkChannelConnected += OnNetworkChannelConnected;

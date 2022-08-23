@@ -304,7 +304,7 @@ namespace GameFramework.Config
             ConfigData? configData = GetConfigData(configName);
             if (!configData.HasValue)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Config name '{0}' is not exist.", configName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Config name '{0}' is not exist.", configName));
             }
 
             return configData.Value.BoolValue;
@@ -332,7 +332,7 @@ namespace GameFramework.Config
             ConfigData? configData = GetConfigData(configName);
             if (!configData.HasValue)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Config name '{0}' is not exist.", configName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Config name '{0}' is not exist.", configName));
             }
 
             return configData.Value.IntValue;
@@ -360,7 +360,7 @@ namespace GameFramework.Config
             ConfigData? configData = GetConfigData(configName);
             if (!configData.HasValue)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Config name '{0}' is not exist.", configName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Config name '{0}' is not exist.", configName));
             }
 
             return configData.Value.FloatValue;
@@ -388,7 +388,7 @@ namespace GameFramework.Config
             ConfigData? configData = GetConfigData(configName);
             if (!configData.HasValue)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Config name '{0}' is not exist.", configName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Config name '{0}' is not exist.", configName));
             }
 
             return configData.Value.StringValue;

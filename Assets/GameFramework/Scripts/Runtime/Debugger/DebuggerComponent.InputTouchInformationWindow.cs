@@ -32,7 +32,7 @@ namespace UnityGameFramework.Runtime
 
             private string GetTouchString(Touch touch)
             {
-                return Utility.Text.Format("{0}, {1}, {2}, {3}, {4}", touch.position, touch.deltaPosition, touch.rawPosition, touch.pressure, touch.phase);
+                return Utility.TextUtility.Format("{0}, {1}, {2}, {3}, {4}", touch.position, touch.deltaPosition, touch.rawPosition, touch.pressure, touch.phase);
             }
 
             private string GetTouchesString(Touch[] touches)

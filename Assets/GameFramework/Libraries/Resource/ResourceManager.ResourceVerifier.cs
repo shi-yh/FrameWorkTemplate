@@ -241,7 +241,7 @@ namespace GameFramework.Resource
             private void GenerateReadWriteVersionList()
             {
                 string readWriteVersionListFileName = Utility.Path.GetRegularPath(Path.Combine(m_ResourceManager.m_ReadWritePath, LocalVersionListFileName));
-                string readWriteVersionListTempFileName = Utility.Text.Format("{0}.{1}", readWriteVersionListFileName, TempExtension);
+                string readWriteVersionListTempFileName = Utility.TextUtility.Format("{0}.{1}", readWriteVersionListFileName, TempExtension);
                 SortedDictionary<string, List<int>> cachedFileSystemsForGenerateReadWriteVersionList = new SortedDictionary<string, List<int>>(StringComparer.Ordinal);
                 FileStream fileStream = null;
                 try
@@ -306,7 +306,7 @@ namespace GameFramework.Resource
                         File.Delete(readWriteVersionListTempFileName);
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Generate read-write version list exception '{0}'.", exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Generate read-write version list exception '{0}'.", exception), exception);
                 }
 
                 if (File.Exists(readWriteVersionListFileName))
@@ -365,7 +365,7 @@ namespace GameFramework.Resource
                         throw;
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Parse read-write version list exception '{0}'.", exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Parse read-write version list exception '{0}'.", exception), exception);
                 }
                 finally
                 {

@@ -261,7 +261,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     return string.Empty;
                 }
 
-                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.Text.Format("{0}/Working/", OutputDirectory)).FullName);
+                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.TextUtility.Format("{0}/Working/", OutputDirectory)).FullName);
             }
         }
 
@@ -274,7 +274,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     return string.Empty;
                 }
 
-                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.Text.Format("{0}/Package/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
+                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.TextUtility.Format("{0}/Package/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
             }
         }
 
@@ -287,7 +287,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     return string.Empty;
                 }
 
-                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.Text.Format("{0}/Full/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
+                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.TextUtility.Format("{0}/Full/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
             }
         }
 
@@ -300,7 +300,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     return string.Empty;
                 }
 
-                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.Text.Format("{0}/Packed/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
+                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.TextUtility.Format("{0}/Packed/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
             }
         }
 
@@ -313,7 +313,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     return string.Empty;
                 }
 
-                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.Text.Format("{0}/BuildReport/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
+                return Utility.Path.GetRegularPath(new DirectoryInfo(Utility.TextUtility.Format("{0}/BuildReport/{1}_{2}/", OutputDirectory, ApplicableGameVersion.Replace('.', '_'), InternalResourceVersion)).FullName);
             }
         }
 
@@ -766,10 +766,10 @@ namespace UnityGameFramework.Editor.ResourceTools
             string platformName = platform.ToString();
             m_BuildReport.LogInfo("Start build resources for '{0}'...", platformName);
 
-            string workingPath = Utility.Text.Format("{0}{1}/", WorkingPath, platformName);
+            string workingPath = Utility.TextUtility.Format("{0}{1}/", WorkingPath, platformName);
             m_BuildReport.LogInfo("Working path is '{0}'.", workingPath);
 
-            string outputPackagePath = Utility.Text.Format("{0}{1}/", OutputPackagePath, platformName);
+            string outputPackagePath = Utility.TextUtility.Format("{0}{1}/", OutputPackagePath, platformName);
             if (OutputPackageSelected)
             {
                 Directory.CreateDirectory(outputPackagePath);
@@ -780,7 +780,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 m_BuildReport.LogInfo("Output package is not selected.");
             }
 
-            string outputFullPath = Utility.Text.Format("{0}{1}/", OutputFullPath, platformName);
+            string outputFullPath = Utility.TextUtility.Format("{0}{1}/", OutputFullPath, platformName);
             if (OutputFullSelected)
             {
                 Directory.CreateDirectory(outputFullPath);
@@ -791,7 +791,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 m_BuildReport.LogInfo("Output full is not selected.");
             }
 
-            string outputPackedPath = Utility.Text.Format("{0}{1}/", OutputPackedPath, platformName);
+            string outputPackedPath = Utility.TextUtility.Format("{0}{1}/", OutputPackedPath, platformName);
             if (OutputPackedSelected)
             {
                 Directory.CreateDirectory(outputPackedPath);
@@ -1143,7 +1143,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             File.WriteAllBytes(updatableVersionListPath, bytes);
             int compressedHashCode = Utility.Verifier.GetCrc32(bytes);
             int dotPosition = RemoteVersionListFileName.LastIndexOf('.');
-            string versionListFullNameWithCrc32 = Utility.Text.Format("{0}.{2:x8}.{1}", RemoteVersionListFileName.Substring(0, dotPosition), RemoteVersionListFileName.Substring(dotPosition + 1), hashCode);
+            string versionListFullNameWithCrc32 = Utility.TextUtility.Format("{0}.{2:x8}.{1}", RemoteVersionListFileName.Substring(0, dotPosition), RemoteVersionListFileName.Substring(dotPosition + 1), hashCode);
             string updatableVersionListPathWithCrc32 = Utility.Path.GetRegularPath(Path.Combine(outputFullPath, versionListFullNameWithCrc32));
             File.Move(updatableVersionListPath, updatableVersionListPathWithCrc32);
 
@@ -1321,7 +1321,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             foreach (string fileSystemName in fileSystemNames)
             {
                 int fileCount = GetResourceIndexesFromFileSystem(resourceDatas, fileSystemName).Length;
-                string fullPath = Utility.Path.GetRegularPath(Path.Combine(outputPath, Utility.Text.Format("{0}.{1}", fileSystemName, DefaultExtension)));
+                string fullPath = Utility.Path.GetRegularPath(Path.Combine(outputPath, Utility.TextUtility.Format("{0}.{1}", fileSystemName, DefaultExtension)));
                 string directory = Path.GetDirectoryName(fullPath);
                 if (!Directory.Exists(directory))
                 {
@@ -1335,7 +1335,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private bool ProcessOutput(Platform platform, string outputPackagePath, string outputFullPath, string outputPackedPath, bool additionalCompressionSelected, string name, string variant, string fileSystem, ResourceData resourceData, byte[] bytes, int length, int hashCode, int compressedLength, int compressedHashCode)
         {
-            string fullNameWithExtension = Utility.Text.Format("{0}.{1}", GetResourceFullName(name, variant), GetExtension(resourceData));
+            string fullNameWithExtension = Utility.TextUtility.Format("{0}.{1}", GetResourceFullName(name, variant), GetExtension(resourceData));
 
             if (OutputPackageSelected)
             {
@@ -1383,7 +1383,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
             if (OutputFullSelected)
             {
-                string fullNameWithCrc32AndExtension = variant != null ? Utility.Text.Format("{0}.{1}.{2:x8}.{3}", name, variant, hashCode, DefaultExtension) : Utility.Text.Format("{0}.{1:x8}.{2}", name, hashCode, DefaultExtension);
+                string fullNameWithCrc32AndExtension = variant != null ? Utility.TextUtility.Format("{0}.{1}.{2:x8}.{3}", name, variant, hashCode, DefaultExtension) : Utility.TextUtility.Format("{0}.{1:x8}.{2}", name, hashCode, DefaultExtension);
                 string fullPath = Utility.Path.GetRegularPath(Path.Combine(outputFullPath, fullNameWithCrc32AndExtension));
                 string fullDirectoryName = Path.GetDirectoryName(fullPath);
                 if (!Directory.Exists(fullDirectoryName))
@@ -1510,7 +1510,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         private static string GetResourceFullName(string name, string variant)
         {
-            return !string.IsNullOrEmpty(variant) ? Utility.Text.Format("{0}.{1}", name, variant) : name;
+            return !string.IsNullOrEmpty(variant) ? Utility.TextUtility.Format("{0}.{1}", name, variant) : name;
         }
 
         private static BuildTarget GetBuildTarget(Platform platform)

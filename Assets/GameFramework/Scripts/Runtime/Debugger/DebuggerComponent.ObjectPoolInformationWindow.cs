@@ -44,7 +44,7 @@ namespace UnityGameFramework.Runtime
 
             private void DrawObjectPool(ObjectPoolBase objectPool)
             {
-                GUILayout.Label(Utility.Text.Format("<b>Object Pool: {0}</b>", objectPool.FullName));
+                GUILayout.Label(Utility.TextUtility.Format("<b>Object Pool: {0}</b>", objectPool.FullName));
                 GUILayout.BeginVertical("box");
                 {
                     DrawItem("Name", objectPool.Name);

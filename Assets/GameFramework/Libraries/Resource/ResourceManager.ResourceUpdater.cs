@@ -80,7 +80,7 @@ namespace GameFramework.Resource
                 m_UpdateRetryCount = 3;
                 m_FailureFlag = false;
                 m_ReadWriteVersionListFileName = Utility.Path.GetRegularPath(Path.Combine(m_ResourceManager.m_ReadWritePath, LocalVersionListFileName));
-                m_ReadWriteVersionListTempFileName = Utility.Text.Format("{0}.{1}", m_ReadWriteVersionListFileName, TempExtension);
+                m_ReadWriteVersionListTempFileName = Utility.TextUtility.Format("{0}.{1}", m_ReadWriteVersionListFileName, TempExtension);
 
                 ResourceApplyStart = null;
                 ResourceApplySuccess = null;
@@ -322,12 +322,12 @@ namespace GameFramework.Resource
 
                 if (m_ApplyingResourcePackStream != null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
                 }
 
                 if (m_UpdatingResourceGroup != null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("There is already a resource group '{0}' being updated.", m_UpdatingResourceGroup.Name));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("There is already a resource group '{0}' being updated.", m_UpdatingResourceGroup.Name));
                 }
 
                 if (m_UpdateWaitingInfoWhilePlaying.Count > 0)
@@ -391,7 +391,7 @@ namespace GameFramework.Resource
                         m_ApplyingResourcePackStream = null;
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Apply resources '{0}' with exception '{1}'.", resourcePackPath, exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Apply resources '{0}' with exception '{1}'.", resourcePackPath, exception), exception);
                 }
             }
 
@@ -413,12 +413,12 @@ namespace GameFramework.Resource
 
                 if (m_ApplyingResourcePackStream != null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
                 }
 
                 if (m_UpdatingResourceGroup != null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("There is already a resource group '{0}' being updated.", m_UpdatingResourceGroup.Name));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("There is already a resource group '{0}' being updated.", m_UpdatingResourceGroup.Name));
                 }
 
                 if (string.IsNullOrEmpty(resourceGroup.Name))
@@ -466,7 +466,7 @@ namespace GameFramework.Resource
 
                 if (m_ApplyingResourcePackStream != null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
                 }
 
                 if (m_UpdatingResourceGroup == null)
@@ -496,7 +496,7 @@ namespace GameFramework.Resource
 
                 if (m_ApplyingResourcePackStream != null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("There is already a resource pack '{0}' being applied.", m_ApplyingResourcePackPath));
                 }
 
                 UpdateInfo updateInfo = null;
@@ -538,7 +538,7 @@ namespace GameFramework.Resource
                             {
                                 if (ResourceApplyFailure != null)
                                 {
-                                    string errorMessage = Utility.Text.Format("Resource compressed hash code error, need '{0}', applied '{1}'.", applyInfo.CompressedHashCode, hashCode);
+                                    string errorMessage = Utility.TextUtility.Format("Resource compressed hash code error, need '{0}', applied '{1}'.", applyInfo.CompressedHashCode, hashCode);
                                     ResourceApplyFailure(applyInfo.ResourceName, m_ApplyingResourcePackPath, errorMessage);
                                 }
 
@@ -552,7 +552,7 @@ namespace GameFramework.Resource
                             {
                                 if (ResourceApplyFailure != null)
                                 {
-                                    string errorMessage = Utility.Text.Format("Unable to decompress resource '{0}'.", applyInfo.ResourcePath);
+                                    string errorMessage = Utility.TextUtility.Format("Unable to decompress resource '{0}'.", applyInfo.ResourcePath);
                                     ResourceApplyFailure(applyInfo.ResourceName, m_ApplyingResourcePackPath, errorMessage);
                                 }
 
@@ -592,7 +592,7 @@ namespace GameFramework.Resource
                             {
                                 if (ResourceApplyFailure != null)
                                 {
-                                    string errorMessage = Utility.Text.Format("Resource hash code error, need '{0}', applied '{1}'.", applyInfo.HashCode, hashCode);
+                                    string errorMessage = Utility.TextUtility.Format("Resource hash code error, need '{0}', applied '{1}'.", applyInfo.HashCode, hashCode);
                                     ResourceApplyFailure(applyInfo.ResourceName, m_ApplyingResourcePackPath, errorMessage);
                                 }
 
@@ -615,7 +615,7 @@ namespace GameFramework.Resource
                         {
                             if (ResourceApplyFailure != null)
                             {
-                                string errorMessage = Utility.Text.Format("Unable to write resource '{0}' to file system '{1}'.", applyInfo.ResourcePath, applyInfo.FileSystemName);
+                                string errorMessage = Utility.TextUtility.Format("Unable to write resource '{0}' to file system '{1}'.", applyInfo.ResourcePath, applyInfo.FileSystemName);
                                 ResourceApplyFailure(applyInfo.ResourceName, m_ApplyingResourcePackPath, errorMessage);
                             }
 
@@ -624,7 +624,7 @@ namespace GameFramework.Resource
                         }
                     }
 
-                    string downloadingResource = Utility.Text.Format("{0}.download", applyInfo.ResourcePath);
+                    string downloadingResource = Utility.TextUtility.Format("{0}.download", applyInfo.ResourcePath);
                     if (File.Exists(downloadingResource))
                     {
                         File.Delete(downloadingResource);
@@ -671,7 +671,7 @@ namespace GameFramework.Resource
                 }
 
                 updateInfo.Downloading = true;
-                string resourceFullNameWithCrc32 = updateInfo.ResourceName.Variant != null ? Utility.Text.Format("{0}.{1}.{2:x8}.{3}", updateInfo.ResourceName.Name, updateInfo.ResourceName.Variant, updateInfo.HashCode, DefaultExtension) : Utility.Text.Format("{0}.{1:x8}.{2}", updateInfo.ResourceName.Name, updateInfo.HashCode, DefaultExtension);
+                string resourceFullNameWithCrc32 = updateInfo.ResourceName.Variant != null ? Utility.TextUtility.Format("{0}.{1}.{2:x8}.{3}", updateInfo.ResourceName.Name, updateInfo.ResourceName.Variant, updateInfo.HashCode, DefaultExtension) : Utility.TextUtility.Format("{0}.{1:x8}.{2}", updateInfo.ResourceName.Name, updateInfo.HashCode, DefaultExtension);
                 m_DownloadManager.AddDownload(updateInfo.ResourcePath, Utility.Path.GetRemotePath(Path.Combine(m_ResourceManager.m_UpdatePrefixUri, resourceFullNameWithCrc32)), updateInfo);
                 return true;
             }
@@ -743,7 +743,7 @@ namespace GameFramework.Resource
                         File.Delete(m_ReadWriteVersionListTempFileName);
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Generate read-write version list exception '{0}'.", exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Generate read-write version list exception '{0}'.", exception), exception);
                 }
 
                 if (File.Exists(m_ReadWriteVersionListFileName))
@@ -770,7 +770,7 @@ namespace GameFramework.Resource
 
                 if (e.CurrentLength > int.MaxValue)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("File '{0}' is too large.", e.DownloadPath));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("File '{0}' is too large.", e.DownloadPath));
                 }
 
                 if (ResourceUpdateStart != null)
@@ -795,13 +795,13 @@ namespace GameFramework.Resource
                 if (e.CurrentLength > updateInfo.CompressedLength)
                 {
                     m_DownloadManager.RemoveDownload(e.SerialId);
-                    string downloadFile = Utility.Text.Format("{0}.download", e.DownloadPath);
+                    string downloadFile = Utility.TextUtility.Format("{0}.download", e.DownloadPath);
                     if (File.Exists(downloadFile))
                     {
                         File.Delete(downloadFile);
                     }
 
-                    string errorMessage = Utility.Text.Format("When download update, downloaded length is larger than compressed length, need '{0}', downloaded '{1}'.", updateInfo.CompressedLength, e.CurrentLength);
+                    string errorMessage = Utility.TextUtility.Format("When download update, downloaded length is larger than compressed length, need '{0}', downloaded '{1}'.", updateInfo.CompressedLength, e.CurrentLength);
                     DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                     OnDownloadFailure(this, downloadFailureEventArgs);
                     ReferencePool.Release(downloadFailureEventArgs);
@@ -832,7 +832,7 @@ namespace GameFramework.Resource
                         if (length != updateInfo.CompressedLength)
                         {
                             fileStream.Close();
-                            string errorMessage = Utility.Text.Format("Resource compressed length error, need '{0}', downloaded '{1}'.", updateInfo.CompressedLength, length);
+                            string errorMessage = Utility.TextUtility.Format("Resource compressed length error, need '{0}', downloaded '{1}'.", updateInfo.CompressedLength, length);
                             DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                             OnDownloadFailure(this, downloadFailureEventArgs);
                             ReferencePool.Release(downloadFailureEventArgs);
@@ -846,7 +846,7 @@ namespace GameFramework.Resource
                             if (hashCode != updateInfo.CompressedHashCode)
                             {
                                 fileStream.Close();
-                                string errorMessage = Utility.Text.Format("Resource compressed hash code error, need '{0}', downloaded '{1}'.", updateInfo.CompressedHashCode, hashCode);
+                                string errorMessage = Utility.TextUtility.Format("Resource compressed hash code error, need '{0}', downloaded '{1}'.", updateInfo.CompressedHashCode, hashCode);
                                 DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                                 OnDownloadFailure(this, downloadFailureEventArgs);
                                 ReferencePool.Release(downloadFailureEventArgs);
@@ -858,7 +858,7 @@ namespace GameFramework.Resource
                             if (!Utility.Compression.Decompress(fileStream, m_ResourceManager.m_CachedStream))
                             {
                                 fileStream.Close();
-                                string errorMessage = Utility.Text.Format("Unable to decompress resource '{0}'.", e.DownloadPath);
+                                string errorMessage = Utility.TextUtility.Format("Unable to decompress resource '{0}'.", e.DownloadPath);
                                 DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                                 OnDownloadFailure(this, downloadFailureEventArgs);
                                 ReferencePool.Release(downloadFailureEventArgs);
@@ -869,7 +869,7 @@ namespace GameFramework.Resource
                             if (uncompressedLength != updateInfo.Length)
                             {
                                 fileStream.Close();
-                                string errorMessage = Utility.Text.Format("Resource length error, need '{0}', downloaded '{1}'.", updateInfo.Length, uncompressedLength);
+                                string errorMessage = Utility.TextUtility.Format("Resource length error, need '{0}', downloaded '{1}'.", updateInfo.Length, uncompressedLength);
                                 DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                                 OnDownloadFailure(this, downloadFailureEventArgs);
                                 ReferencePool.Release(downloadFailureEventArgs);
@@ -907,7 +907,7 @@ namespace GameFramework.Resource
                             if (hashCode != updateInfo.HashCode)
                             {
                                 fileStream.Close();
-                                string errorMessage = Utility.Text.Format("Resource hash code error, need '{0}', downloaded '{1}'.", updateInfo.HashCode, hashCode);
+                                string errorMessage = Utility.TextUtility.Format("Resource hash code error, need '{0}', downloaded '{1}'.", updateInfo.HashCode, hashCode);
                                 DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                                 OnDownloadFailure(this, downloadFailureEventArgs);
                                 ReferencePool.Release(downloadFailureEventArgs);
@@ -927,7 +927,7 @@ namespace GameFramework.Resource
 
                         if (!retVal)
                         {
-                            string errorMessage = Utility.Text.Format("Write resource to file system '{0}' error.", fileSystem.FullPath);
+                            string errorMessage = Utility.TextUtility.Format("Write resource to file system '{0}' error.", fileSystem.FullPath);
                             DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                             OnDownloadFailure(this, downloadFailureEventArgs);
                             ReferencePool.Release(downloadFailureEventArgs);
@@ -968,7 +968,7 @@ namespace GameFramework.Resource
                 }
                 catch (Exception exception)
                 {
-                    string errorMessage = Utility.Text.Format("Update resource '{0}' with error message '{1}'.", e.DownloadPath, exception);
+                    string errorMessage = Utility.TextUtility.Format("Update resource '{0}' with error message '{1}'.", e.DownloadPath, exception);
                     DownloadFailureEventArgs downloadFailureEventArgs = DownloadFailureEventArgs.Create(e.SerialId, e.DownloadPath, e.DownloadUri, errorMessage, e.UserData);
                     OnDownloadFailure(this, downloadFailureEventArgs);
                     ReferencePool.Release(downloadFailureEventArgs);

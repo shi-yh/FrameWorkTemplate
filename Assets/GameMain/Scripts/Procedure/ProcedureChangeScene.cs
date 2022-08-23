@@ -88,7 +88,7 @@ namespace StarForce
             }
 
 
-            Type procedureType = Type.GetType(Utility.Text.Format("StarForce.{0}", _sceneData.ProcedureName));
+            Type procedureType = Type.GetType(Utility.TextUtility.Format("StarForce.{0}", _sceneData.ProcedureName));
 
             if (procedureType != null)
             {

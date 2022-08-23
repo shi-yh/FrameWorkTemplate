@@ -159,7 +159,7 @@ namespace GameFramework.DataTable
 
             if (!typeof(IDataRow).IsAssignableFrom(dataRowType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
             }
 
             return InternalHasDataTable(new TypeNamePair(dataRowType));
@@ -191,7 +191,7 @@ namespace GameFramework.DataTable
 
             if (!typeof(IDataRow).IsAssignableFrom(dataRowType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
             }
 
             return InternalHasDataTable(new TypeNamePair(dataRowType, name));
@@ -221,7 +221,7 @@ namespace GameFramework.DataTable
 
             if (!typeof(IDataRow).IsAssignableFrom(dataRowType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
             }
 
             return InternalGetDataTable(new TypeNamePair(dataRowType));
@@ -253,7 +253,7 @@ namespace GameFramework.DataTable
 
             if (!typeof(IDataRow).IsAssignableFrom(dataRowType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
             }
 
             return InternalGetDataTable(new TypeNamePair(dataRowType, name));
@@ -334,7 +334,7 @@ namespace GameFramework.DataTable
             TypeNamePair typeNamePair = new TypeNamePair(typeof(T), name);
             if (HasDataTable<T>(name))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Already exist data table '{0}'.", typeNamePair));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Already exist data table '{0}'.", typeNamePair));
             }
 
             DataTable<T> dataTable = new DataTable<T>(name);
@@ -369,13 +369,13 @@ namespace GameFramework.DataTable
 
             if (!typeof(IDataRow).IsAssignableFrom(dataRowType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
             }
 
             TypeNamePair typeNamePair = new TypeNamePair(dataRowType, name);
             if (HasDataTable(dataRowType, name))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Already exist data table '{0}'.", typeNamePair));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Already exist data table '{0}'.", typeNamePair));
             }
 
             Type dataTableType = typeof(DataTable<>).MakeGenericType(dataRowType);
@@ -409,7 +409,7 @@ namespace GameFramework.DataTable
 
             if (!typeof(IDataRow).IsAssignableFrom(dataRowType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
             }
 
             return InternalDestroyDataTable(new TypeNamePair(dataRowType));
@@ -440,7 +440,7 @@ namespace GameFramework.DataTable
 
             if (!typeof(IDataRow).IsAssignableFrom(dataRowType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Data row type '{0}' is invalid.", dataRowType.FullName));
             }
 
             return InternalDestroyDataTable(new TypeNamePair(dataRowType, name));

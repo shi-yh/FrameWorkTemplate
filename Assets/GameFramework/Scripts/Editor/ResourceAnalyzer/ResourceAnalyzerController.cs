@@ -107,7 +107,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 string assetName = assets[i].Name;
                 if (string.IsNullOrEmpty(assetName))
                 {
-                    Debug.LogWarning(Utility.Text.Format("Can not find asset by guid '{0}'.", assets[i].Guid));
+                    Debug.LogWarning(Utility.TextUtility.Format("Can not find asset by guid '{0}'.", assets[i].Guid));
                     continue;
                 }
 
@@ -162,7 +162,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 string guid = AssetDatabase.AssetPathToGUID(dependencyAssetName);
                 if (string.IsNullOrEmpty(guid))
                 {
-                    Debug.LogWarning(Utility.Text.Format("Can not find guid by asset '{0}'.", dependencyAssetName));
+                    Debug.LogWarning(Utility.TextUtility.Format("Can not find guid by asset '{0}'.", dependencyAssetName));
                     continue;
                 }
 

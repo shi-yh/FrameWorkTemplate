@@ -91,7 +91,7 @@ namespace GameFramework.Resource
                         return fullName;
                     }
 
-                    fullName = m_Variant != null ? Utility.Text.Format("{0}.{1}.{2}", m_Name, m_Variant, m_Extension) : Utility.Text.Format("{0}.{1}", m_Name, m_Extension);
+                    fullName = m_Variant != null ? Utility.TextUtility.Format("{0}.{1}.{2}", m_Name, m_Variant, m_Extension) : Utility.TextUtility.Format("{0}.{1}", m_Name, m_Extension);
                     s_ResourceFullNames.Add(this, fullName);
                     return fullName;
                 }

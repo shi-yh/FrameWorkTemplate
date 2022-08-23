@@ -22,7 +22,7 @@ namespace StarForce.Editor.DataTableTools
                 DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(dataTableName);
                 if (!DataTableGenerator.CheckRawData(dataTableProcessor, dataTableName))
                 {
-                    Debug.LogError(Utility.Text.Format("Check raw data failure. DataTableName='{0}'", dataTableName));
+                    Debug.LogError(Utility.TextUtility.Format("Check raw data failure. DataTableName='{0}'", dataTableName));
                     break;
                 }
 

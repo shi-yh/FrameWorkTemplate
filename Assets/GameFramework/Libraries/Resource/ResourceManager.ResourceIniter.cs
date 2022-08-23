@@ -159,7 +159,7 @@ namespace GameFramework.Resource
                         throw;
                     }
 
-                    throw new GameFrameworkException(Utility.Text.Format("Parse package version list exception '{0}'.", exception), exception);
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Parse package version list exception '{0}'.", exception), exception);
                 }
                 finally
                 {
@@ -174,7 +174,7 @@ namespace GameFramework.Resource
 
             private void OnLoadPackageVersionListFailure(string fileUri, string errorMessage, object userData)
             {
-                throw new GameFrameworkException(Utility.Text.Format("Package version list '{0}' is invalid, error message is '{1}'.", fileUri, string.IsNullOrEmpty(errorMessage) ? "<Empty>" : errorMessage));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Package version list '{0}' is invalid, error message is '{1}'.", fileUri, string.IsNullOrEmpty(errorMessage) ? "<Empty>" : errorMessage));
             }
         }
     }

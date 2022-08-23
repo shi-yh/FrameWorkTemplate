@@ -309,7 +309,7 @@ namespace GameFramework.Resource
                 string[] dependencyAssetNames = null;
                 if (!CheckAsset(assetName, out resourceInfo, out dependencyAssetNames))
                 {
-                    string errorMessage = Utility.Text.Format("Can not load asset '{0}'.", assetName);
+                    string errorMessage = Utility.TextUtility.Format("Can not load asset '{0}'.", assetName);
                     if (loadAssetCallbacks.LoadAssetFailureCallback != null)
                     {
                         loadAssetCallbacks.LoadAssetFailureCallback(assetName, resourceInfo != null && !resourceInfo.Ready ? LoadResourceStatus.NotReady : LoadResourceStatus.NotExist, errorMessage, userData);
@@ -321,7 +321,7 @@ namespace GameFramework.Resource
 
                 if (resourceInfo.IsLoadFromBinary)
                 {
-                    string errorMessage = Utility.Text.Format("Can not load asset '{0}' which is a binary asset.", assetName);
+                    string errorMessage = Utility.TextUtility.Format("Can not load asset '{0}' which is a binary asset.", assetName);
                     if (loadAssetCallbacks.LoadAssetFailureCallback != null)
                     {
                         loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.TypeError, errorMessage, userData);
@@ -336,7 +336,7 @@ namespace GameFramework.Resource
                 {
                     if (!LoadDependencyAsset(dependencyAssetName, priority, mainTask, userData))
                     {
-                        string errorMessage = Utility.Text.Format("Can not load dependency asset '{0}' when load asset '{1}'.", dependencyAssetName, assetName);
+                        string errorMessage = Utility.TextUtility.Format("Can not load dependency asset '{0}' when load asset '{1}'.", dependencyAssetName, assetName);
                         if (loadAssetCallbacks.LoadAssetFailureCallback != null)
                         {
                             loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.DependencyError, errorMessage, userData);
@@ -376,7 +376,7 @@ namespace GameFramework.Resource
                 string[] dependencyAssetNames = null;
                 if (!CheckAsset(sceneAssetName, out resourceInfo, out dependencyAssetNames))
                 {
-                    string errorMessage = Utility.Text.Format("Can not load scene '{0}'.", sceneAssetName);
+                    string errorMessage = Utility.TextUtility.Format("Can not load scene '{0}'.", sceneAssetName);
                     if (loadSceneCallbacks.LoadSceneFailureCallback != null)
                     {
                         loadSceneCallbacks.LoadSceneFailureCallback(sceneAssetName, resourceInfo != null && !resourceInfo.Ready ? LoadResourceStatus.NotReady : LoadResourceStatus.NotExist, errorMessage, userData);
@@ -388,7 +388,7 @@ namespace GameFramework.Resource
 
                 if (resourceInfo.IsLoadFromBinary)
                 {
-                    string errorMessage = Utility.Text.Format("Can not load scene asset '{0}' which is a binary asset.", sceneAssetName);
+                    string errorMessage = Utility.TextUtility.Format("Can not load scene asset '{0}' which is a binary asset.", sceneAssetName);
                     if (loadSceneCallbacks.LoadSceneFailureCallback != null)
                     {
                         loadSceneCallbacks.LoadSceneFailureCallback(sceneAssetName, LoadResourceStatus.TypeError, errorMessage, userData);
@@ -403,7 +403,7 @@ namespace GameFramework.Resource
                 {
                     if (!LoadDependencyAsset(dependencyAssetName, priority, mainTask, userData))
                     {
-                        string errorMessage = Utility.Text.Format("Can not load dependency asset '{0}' when load scene '{1}'.", dependencyAssetName, sceneAssetName);
+                        string errorMessage = Utility.TextUtility.Format("Can not load dependency asset '{0}' when load scene '{1}'.", dependencyAssetName, sceneAssetName);
                         if (loadSceneCallbacks.LoadSceneFailureCallback != null)
                         {
                             loadSceneCallbacks.LoadSceneFailureCallback(sceneAssetName, LoadResourceStatus.DependencyError, errorMessage, userData);
@@ -443,7 +443,7 @@ namespace GameFramework.Resource
                 }
                 else
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not find asset of scene '{0}'.", sceneAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not find asset of scene '{0}'.", sceneAssetName));
                 }
 
                 m_ResourceManager.m_ResourceHelper.UnloadScene(sceneAssetName, unloadSceneCallbacks, userData);
@@ -517,7 +517,7 @@ namespace GameFramework.Resource
                 if (resourceInfo.UseFileSystem)
                 {
                     storageInFileSystem = true;
-                    relativePath = Utility.Text.Format("{0}.{1}", resourceInfo.FileSystemName, DefaultExtension);
+                    relativePath = Utility.TextUtility.Format("{0}.{1}", resourceInfo.FileSystemName, DefaultExtension);
                     fileName = resourceInfo.ResourceName.FullName;
                 }
                 else
@@ -565,7 +565,7 @@ namespace GameFramework.Resource
                 ResourceInfo resourceInfo = GetResourceInfo(binaryAssetName);
                 if (resourceInfo == null)
                 {
-                    string errorMessage = Utility.Text.Format("Can not load binary '{0}' which is not exist.", binaryAssetName);
+                    string errorMessage = Utility.TextUtility.Format("Can not load binary '{0}' which is not exist.", binaryAssetName);
                     if (loadBinaryCallbacks.LoadBinaryFailureCallback != null)
                     {
                         loadBinaryCallbacks.LoadBinaryFailureCallback(binaryAssetName, LoadResourceStatus.NotExist, errorMessage, userData);
@@ -577,7 +577,7 @@ namespace GameFramework.Resource
 
                 if (!resourceInfo.Ready)
                 {
-                    string errorMessage = Utility.Text.Format("Can not load binary '{0}' which is not ready.", binaryAssetName);
+                    string errorMessage = Utility.TextUtility.Format("Can not load binary '{0}' which is not ready.", binaryAssetName);
                     if (loadBinaryCallbacks.LoadBinaryFailureCallback != null)
                     {
                         loadBinaryCallbacks.LoadBinaryFailureCallback(binaryAssetName, LoadResourceStatus.NotReady, errorMessage, userData);
@@ -589,7 +589,7 @@ namespace GameFramework.Resource
 
                 if (!resourceInfo.IsLoadFromBinary)
                 {
-                    string errorMessage = Utility.Text.Format("Can not load binary '{0}' which is not a binary asset.", binaryAssetName);
+                    string errorMessage = Utility.TextUtility.Format("Can not load binary '{0}' which is not a binary asset.", binaryAssetName);
                     if (loadBinaryCallbacks.LoadBinaryFailureCallback != null)
                     {
                         loadBinaryCallbacks.LoadBinaryFailureCallback(binaryAssetName, LoadResourceStatus.TypeError, errorMessage, userData);
@@ -620,22 +620,22 @@ namespace GameFramework.Resource
                 ResourceInfo resourceInfo = GetResourceInfo(binaryAssetName);
                 if (resourceInfo == null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
                 }
 
                 if (!resourceInfo.Ready)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
                 }
 
                 if (!resourceInfo.IsLoadFromBinary)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
                 }
 
                 if (!resourceInfo.UseFileSystem)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
                 }
 
                 IFileSystem fileSystem = m_ResourceManager.GetFileSystem(resourceInfo.FileSystemName, resourceInfo.StorageInReadOnly);
@@ -667,22 +667,22 @@ namespace GameFramework.Resource
                 ResourceInfo resourceInfo = GetResourceInfo(binaryAssetName);
                 if (resourceInfo == null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
                 }
 
                 if (!resourceInfo.Ready)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
                 }
 
                 if (!resourceInfo.IsLoadFromBinary)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
                 }
 
                 if (!resourceInfo.UseFileSystem)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
                 }
 
                 IFileSystem fileSystem = m_ResourceManager.GetFileSystem(resourceInfo.FileSystemName, resourceInfo.StorageInReadOnly);
@@ -708,22 +708,22 @@ namespace GameFramework.Resource
                 ResourceInfo resourceInfo = GetResourceInfo(binaryAssetName);
                 if (resourceInfo == null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
                 }
 
                 if (!resourceInfo.Ready)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
                 }
 
                 if (!resourceInfo.IsLoadFromBinary)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
                 }
 
                 if (!resourceInfo.UseFileSystem)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
                 }
 
                 IFileSystem fileSystem = m_ResourceManager.GetFileSystem(resourceInfo.FileSystemName, resourceInfo.StorageInReadOnly);
@@ -756,22 +756,22 @@ namespace GameFramework.Resource
                 ResourceInfo resourceInfo = GetResourceInfo(binaryAssetName);
                 if (resourceInfo == null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not exist.", binaryAssetName));
                 }
 
                 if (!resourceInfo.Ready)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not ready.", binaryAssetName));
                 }
 
                 if (!resourceInfo.IsLoadFromBinary)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not a binary asset.", binaryAssetName));
                 }
 
                 if (!resourceInfo.UseFileSystem)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Can not load binary '{0}' from file system which is not use file system.", binaryAssetName));
                 }
 
                 IFileSystem fileSystem = m_ResourceManager.GetFileSystem(resourceInfo.FileSystemName, resourceInfo.StorageInReadOnly);

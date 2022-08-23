@@ -200,7 +200,7 @@ namespace UnityGameFramework.Editor
                 NoneOptionName
             };
 
-            textHelperTypeNames.AddRange(Type.GetRuntimeTypeNames(typeof(Utility.Text.ITextHelper)));
+            textHelperTypeNames.AddRange(Type.GetRuntimeTypeNames(typeof(Utility.TextUtility.ITextHelper)));
             m_TextHelperTypeNames = textHelperTypeNames.ToArray();
             m_TextHelperTypeNameIndex = 0;
             if (!string.IsNullOrEmpty(m_TextHelperTypeName.stringValue))

@@ -9,7 +9,7 @@ namespace GameFramework
 {
     public static partial class Utility
     {
-        public static partial class Text
+        public static partial class TextUtility
         {
             /// <summary>
             /// 字符辅助器接口。

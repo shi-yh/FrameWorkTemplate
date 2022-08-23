@@ -107,11 +107,11 @@ namespace StarForce
 
         private void LoadFont(string fontName)
         {
-            m_LoadedFlag.Add(Utility.Text.Format("Font.{0}", fontName), false);
+            m_LoadedFlag.Add(Utility.TextUtility.Format("Font.{0}", fontName), false);
             GameEntry.Resource.LoadAsset(AssetUtility.GetFontAsset(fontName), Constant.AssetPriority.FontAsset, new LoadAssetCallbacks(
                 (assetName, asset, duration, userData) =>
                 {
-                    m_LoadedFlag[Utility.Text.Format("Font.{0}", fontName)] = true;
+                    m_LoadedFlag[Utility.TextUtility.Format("Font.{0}", fontName)] = true;
                     UGuiForm.SetMainFont((Font)asset);
                     Log.Info("Load font '{0}' OK.", fontName);
                 },

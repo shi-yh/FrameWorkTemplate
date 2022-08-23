@@ -54,7 +54,7 @@ namespace StarForce.Editor.DataTableTools
                     return dataProcessor;
                 }
 
-                throw new GameFrameworkException(Utility.Text.Format("Not supported data processor type '{0}'.", type));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Not supported data processor type '{0}'.", type));
             }
         }
     }

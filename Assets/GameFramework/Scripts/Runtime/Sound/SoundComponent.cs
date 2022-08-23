@@ -269,14 +269,14 @@ namespace UnityGameFramework.Runtime
                 return false;
             }
 
-            soundGroupHelper.name = Utility.Text.Format("Sound Group - {0}", soundGroupName);
+            soundGroupHelper.name = Utility.TextUtility.Format("Sound Group - {0}", soundGroupName);
             Transform transform = soundGroupHelper.transform;
             transform.SetParent(m_InstanceRoot);
             transform.localScale = Vector3.one;
 
             if (m_AudioMixer != null)
             {
-                AudioMixerGroup[] audioMixerGroups = m_AudioMixer.FindMatchingGroups(Utility.Text.Format("Master/{0}", soundGroupName));
+                AudioMixerGroup[] audioMixerGroups = m_AudioMixer.FindMatchingGroups(Utility.TextUtility.Format("Master/{0}", soundGroupName));
                 if (audioMixerGroups.Length > 0)
                 {
                     soundGroupHelper.AudioMixerGroup = audioMixerGroups[0];
@@ -587,14 +587,14 @@ namespace UnityGameFramework.Runtime
                 return false;
             }
 
-            soundAgentHelper.name = Utility.Text.Format("Sound Agent Helper - {0} - {1}", soundGroupName, index);
+            soundAgentHelper.name = Utility.TextUtility.Format("Sound Agent Helper - {0} - {1}", soundGroupName, index);
             Transform transform = soundAgentHelper.transform;
             transform.SetParent(soundGroupHelper.transform);
             transform.localScale = Vector3.one;
 
             if (m_AudioMixer != null)
             {
-                AudioMixerGroup[] audioMixerGroups = m_AudioMixer.FindMatchingGroups(Utility.Text.Format("Master/{0}/{1}", soundGroupName, index));
+                AudioMixerGroup[] audioMixerGroups = m_AudioMixer.FindMatchingGroups(Utility.TextUtility.Format("Master/{0}/{1}", soundGroupName, index));
                 if (audioMixerGroups.Length > 0)
                 {
                     soundAgentHelper.AudioMixerGroup = audioMixerGroups[0];
@@ -631,7 +631,7 @@ namespace UnityGameFramework.Runtime
 
         private void OnPlaySoundFailure(object sender, GameFramework.Sound.PlaySoundFailureEventArgs e)
         {
-            string logMessage = Utility.Text.Format("Play sound failure, asset name '{0}', sound group name '{1}', error code '{2}', error message '{3}'.", e.SoundAssetName, e.SoundGroupName, e.ErrorCode, e.ErrorMessage);
+            string logMessage = Utility.TextUtility.Format("Play sound failure, asset name '{0}', sound group name '{1}', error code '{2}', error message '{3}'.", e.SoundAssetName, e.SoundGroupName, e.ErrorCode, e.ErrorMessage);
             if (e.ErrorCode == PlaySoundErrorCode.IgnoredDueToLowPriority)
             {
                 Log.Info(logMessage);

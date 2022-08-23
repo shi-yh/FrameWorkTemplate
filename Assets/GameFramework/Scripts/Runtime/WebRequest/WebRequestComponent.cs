@@ -522,7 +522,7 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            webRequestAgentHelper.name = Utility.Text.Format("Web Request Agent Helper - {0}", index);
+            webRequestAgentHelper.name = Utility.TextUtility.Format("Web Request Agent Helper - {0}", index);
             Transform transform = webRequestAgentHelper.transform;
             transform.SetParent(m_InstanceRoot);
             transform.localScale = Vector3.one;

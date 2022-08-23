@@ -7,6 +7,8 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using StarForce.LocalizationGenerator;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
@@ -19,6 +21,7 @@ namespace StarForce
         private const float FadeTime = 0.3f;
 
         private static Font s_MainFont = null;
+        private static TMP_FontAsset s_MainFontAsset = null;
         private Canvas m_CachedCanvas = null;
         private CanvasGroup m_CanvasGroup = null;
         private List<Canvas> m_CachedCanvasContainer = new List<Canvas>();
@@ -72,6 +75,18 @@ namespace StarForce
             s_MainFont = mainFont;
         }
 
+        public static void SetMainFontAsset(TMP_FontAsset mainFontAsset)
+        {
+            if (mainFontAsset==null)
+            {
+                Log.Error("Main font Asset is invalid.");
+                return;
+            }
+
+            s_MainFontAsset = s_MainFontAsset;
+        }
+        
+
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)
 #else
@@ -94,14 +109,12 @@ namespace StarForce
 
             gameObject.GetOrAddComponent<GraphicRaycaster>();
 
-            Text[] texts = GetComponentsInChildren<Text>(true);
-            for (int i = 0; i < texts.Length; i++)
+            LanguageText[] texts = GetComponentsInChildren<LanguageText>(true);
+            
+            foreach (var t in texts)
             {
-                texts[i].font = s_MainFont;
-                if (!string.IsNullOrEmpty(texts[i].text))
-                {
-                    texts[i].text = GameEntry.Localization.GetString(texts[i].text);
-                }
+                t.SetFont(s_MainFont,s_MainFontAsset);
+                t.RefreshText(GameEntry.Localization.GetString(t.Id.ToString()));
             }
         }
 

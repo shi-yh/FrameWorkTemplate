@@ -198,7 +198,7 @@ namespace GameFramework
 
             if (!typeof(IReference).IsAssignableFrom(referenceType))
             {
-                throw new GameFrameworkException(Utility.Text.Format("Reference type '{0}' is invalid.", referenceType.FullName));
+                throw new GameFrameworkException(Utility.TextUtility.Format("Reference type '{0}' is invalid.", referenceType.FullName));
             }
         }
 

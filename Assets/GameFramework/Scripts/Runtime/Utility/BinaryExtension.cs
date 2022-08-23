@@ -187,7 +187,7 @@ public static class BinaryExtension
         int length = Utility.Converter.GetBytes(value, s_CachedBytes);
         if (length > byte.MaxValue)
         {
-            throw new GameFrameworkException(Utility.Text.Format("String '{0}' is too long.", value));
+            throw new GameFrameworkException(Utility.TextUtility.Format("String '{0}' is too long.", value));
         }
 
         Utility.Encryption.GetSelfXorBytes(s_CachedBytes, encryptBytes);

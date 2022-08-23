@@ -44,21 +44,21 @@ namespace GameFramework.Resource
                 {
                     if (resourceGroups[i] == null)
                     {
-                        throw new GameFrameworkException(Utility.Text.Format("Resource group index '{0}' is invalid.", i));
+                        throw new GameFrameworkException(Utility.TextUtility.Format("Resource group index '{0}' is invalid.", i));
                     }
 
                     for (int j = i + 1; j < resourceGroups.Length; j++)
                     {
                         if (resourceGroups[i] == resourceGroups[j])
                         {
-                            throw new GameFrameworkException(Utility.Text.Format("Resource group '{0}' duplicated.", resourceGroups[i].Name));
+                            throw new GameFrameworkException(Utility.TextUtility.Format("Resource group '{0}' duplicated.", resourceGroups[i].Name));
                         }
                     }
                 }
 
                 if (resourceGroups[lastIndex] == null)
                 {
-                    throw new GameFrameworkException(Utility.Text.Format("Resource group index '{0}' is invalid.", lastIndex));
+                    throw new GameFrameworkException(Utility.TextUtility.Format("Resource group index '{0}' is invalid.", lastIndex));
                 }
 
                 m_ResourceGroups = resourceGroups;
@@ -76,7 +76,7 @@ namespace GameFramework.Resource
                         ResourceInfo resourceInfo = null;
                         if (!m_ResourceInfos.TryGetValue(resourceName, out resourceInfo))
                         {
-                            throw new GameFrameworkException(Utility.Text.Format("Resource info '{0}' is invalid.", resourceName.FullName));
+                            throw new GameFrameworkException(Utility.TextUtility.Format("Resource info '{0}' is invalid.", resourceName.FullName));
                         }
 
                         if (m_ResourceNames.Add(resourceName))

@@ -97,15 +97,15 @@ namespace UnityGameFramework.Editor
                                     data[index++] = "Download Path,Serial Id,Tag,Priority,Status";
                                     foreach (TaskInfo downloadInfo in downloadInfos)
                                     {
-                                        data[index++] = Utility.Text.Format("{0},{1},{2},{3},{4}", downloadInfo.Description, downloadInfo.SerialId, downloadInfo.Tag ?? string.Empty, downloadInfo.Priority, downloadInfo.Status);
+                                        data[index++] = Utility.TextUtility.Format("{0},{1},{2},{3},{4}", downloadInfo.Description, downloadInfo.SerialId, downloadInfo.Tag ?? string.Empty, downloadInfo.Priority, downloadInfo.Status);
                                     }
 
                                     File.WriteAllLines(exportFileName, data, Encoding.UTF8);
-                                    Debug.Log(Utility.Text.Format("Export download task CSV data to '{0}' success.", exportFileName));
+                                    Debug.Log(Utility.TextUtility.Format("Export download task CSV data to '{0}' success.", exportFileName));
                                 }
                                 catch (Exception exception)
                                 {
-                                    Debug.LogError(Utility.Text.Format("Export download task CSV data to '{0}' failure, exception is '{1}'.", exportFileName, exception));
+                                    Debug.LogError(Utility.TextUtility.Format("Export download task CSV data to '{0}' failure, exception is '{1}'.", exportFileName, exception));
                                 }
                             }
                         }
@@ -144,7 +144,7 @@ namespace UnityGameFramework.Editor
 
         private void DrawDownloadInfo(TaskInfo downloadInfo)
         {
-            EditorGUILayout.LabelField(downloadInfo.Description, Utility.Text.Format("[SerialId]{0} [Tag]{1} [Priority]{2} [Status]{3}", downloadInfo.SerialId, downloadInfo.Tag ?? "<None>", downloadInfo.Priority, downloadInfo.Status));
+            EditorGUILayout.LabelField(downloadInfo.Description, Utility.TextUtility.Format("[SerialId]{0} [Tag]{1} [Priority]{2} [Status]{3}", downloadInfo.SerialId, downloadInfo.Tag ?? "<None>", downloadInfo.Priority, downloadInfo.Status));
         }
 
         private void RefreshTypeNames()

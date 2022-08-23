@@ -355,7 +355,7 @@ namespace UnityGameFramework.Runtime
             string[] debuggerWindowNames = debuggerWindowGroup.GetDebuggerWindowNames();
             for (int i = 0; i < debuggerWindowNames.Length; i++)
             {
-                names.Add(Utility.Text.Format("<b>{0}</b>", debuggerWindowNames[i]));
+                names.Add(Utility.TextUtility.Format("<b>{0}</b>", debuggerWindowNames[i]));
             }
 
             if (debuggerWindowGroup == m_DebuggerManager.DebuggerWindowRoot)
@@ -414,7 +414,7 @@ namespace UnityGameFramework.Runtime
                 color = m_ConsoleWindow.GetLogStringColor(LogType.Log);
             }
 
-            string title = Utility.Text.Format("<color=#{0:x2}{1:x2}{2:x2}{3:x2}><b>FPS: {4:F2}</b></color>", color.r, color.g, color.b, color.a, m_FpsCounter.CurrentFps);
+            string title = Utility.TextUtility.Format("<color=#{0:x2}{1:x2}{2:x2}{3:x2}><b>FPS: {4:F2}</b></color>", color.r, color.g, color.b, color.a, m_FpsCounter.CurrentFps);
             if (GUILayout.Button(title, GUILayout.Width(100f), GUILayout.Height(40f)))
             {
                 m_ShowFullWindow = true;

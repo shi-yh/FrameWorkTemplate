@@ -14,7 +14,7 @@ namespace UnityGameFramework.Runtime
     /// <summary>
     /// 默认字符辅助器。
     /// </summary>
-    public class DefaultTextHelper : Utility.Text.ITextHelper
+    public class DefaultTextHelper : Utility.TextUtility.ITextHelper
     {
         private const int StringBuilderCapacity = 1024;
 
