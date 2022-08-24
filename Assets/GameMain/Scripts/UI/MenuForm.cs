@@ -37,8 +37,8 @@ namespace StarForce
             GameEntry.UI.OpenDialog(new DialogParams()
             {
                 Mode = 2,
-                Title = GameEntry.Localization.GetString("AskQuitGame.Title"),
-                Message = GameEntry.Localization.GetString("AskQuitGame.Message"),
+                Title = GameEntry.Localization.GetString(/*"AskQuitGame.Title"*/0),
+                Message = GameEntry.Localization.GetString(/*"AskQuitGame.Message"*/0),
                 OnClickConfirm = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
             });
         }

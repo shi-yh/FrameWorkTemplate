@@ -178,7 +178,7 @@ namespace StarForce
         {
             if (string.IsNullOrEmpty(confirmText))
             {
-                confirmText = GameEntry.Localization.GetString("Dialog.ConfirmButton");
+                confirmText = GameEntry.Localization.GetString(/*"Dialog.ConfirmButton"*/0);
             }
 
             for (int i = 0; i < m_ConfirmTexts.Length; i++)
@@ -191,7 +191,7 @@ namespace StarForce
         {
             if (string.IsNullOrEmpty(cancelText))
             {
-                cancelText = GameEntry.Localization.GetString("Dialog.CancelButton");
+                cancelText = GameEntry.Localization.GetString(/*"Dialog.CancelButton"*/0);
             }
 
             for (int i = 0; i < m_CancelTexts.Length; i++)
@@ -204,7 +204,7 @@ namespace StarForce
         {
             if (string.IsNullOrEmpty(otherText))
             {
-                otherText = GameEntry.Localization.GetString("Dialog.OtherButton");
+                otherText = GameEntry.Localization.GetString(/*"Dialog.OtherButton"*/0);
             }
 
             for (int i = 0; i < m_OtherTexts.Length; i++)

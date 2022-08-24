@@ -114,7 +114,7 @@ namespace StarForce
             foreach (var t in texts)
             {
                 t.SetFont(s_MainFont,s_MainFontAsset);
-                t.RefreshText(GameEntry.Localization.GetString(t.Id.ToString()));
+                t.RefreshText(GameEntry.Localization.GetString(t.Id));
             }
         }
 

@@ -47,11 +47,11 @@ namespace StarForce
                 GameEntry.UI.OpenDialog(new DialogParams
                 {
                     Mode = 2,
-                    Title = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.Title"),
-                    Message = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.Message"),
-                    ConfirmText = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.UpdateButton"),
+                    Title = GameEntry.Localization.GetString(/*"UpdateResourceViaCarrierDataNetwork.Title"*/0),
+                    Message = GameEntry.Localization.GetString(/*"UpdateResourceViaCarrierDataNetwork.Message"*/0),
+                    ConfirmText = GameEntry.Localization.GetString(/*"UpdateResourceViaCarrierDataNetwork.UpdateButton"*/0),
                     OnClickConfirm = StartUpdateResources,
-                    CancelText = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.QuitButton"),
+                    CancelText = GameEntry.Localization.GetString(/*"UpdateResourceViaCarrierDataNetwork.QuitButton"*/0),
                     OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
                 });
 
@@ -110,7 +110,7 @@ namespace StarForce
             }
 
             float progressTotal = (float)currentTotalUpdateLength / m_UpdateTotalCompressedLength;
-            string descriptionText = GameEntry.Localization.GetString("UpdateResource.Tips", m_UpdateSuccessCount.ToString(), m_UpdateCount.ToString(), GetByteLengthString(currentTotalUpdateLength), GetByteLengthString(m_UpdateTotalCompressedLength), progressTotal, GetByteLengthString((int)GameEntry.Download.CurrentSpeed));
+            string descriptionText = GameEntry.Localization.GetString(/*"UpdateResource.Tips"*/0, m_UpdateSuccessCount.ToString(), m_UpdateCount.ToString(), GetByteLengthString(currentTotalUpdateLength), GetByteLengthString(m_UpdateTotalCompressedLength), progressTotal, GetByteLengthString((int)GameEntry.Download.CurrentSpeed));
             m_UpdateResourceForm.SetProgress(progressTotal, descriptionText);
         }
 

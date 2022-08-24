@@ -1,15 +1,25 @@
 using System;
 using TMPro;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
+using Object = System.Object;
 
 namespace StarForce.LocalizationGenerator
 {
+    public enum LanguageTextMode
+    {
+        None,
+        Content,
+        FirstTitle,
+        SecondTitle,
+        ThirdTitle
+    }
+    
     [ExecuteInEditMode]
     public class LanguageText : MonoBehaviour
     {
-        private int _id = -1;
         private TextMeshPro _textMeshPro;
         private Text _text;
         private TextMeshProUGUI _textMeshProUGUI;
@@ -23,12 +33,9 @@ namespace StarForce.LocalizationGenerator
 
         private string _languageStr;
 
-        public int Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        public int Id { get; set; } = -1;
 
+        public LanguageTextMode TextMode { get; set; }
 
         private void Awake()
         {
@@ -42,7 +49,31 @@ namespace StarForce.LocalizationGenerator
             
         }
 
-        private void InitComponent()
+        public string GetText()
+        {
+            string str = "";
+
+            if (_text!=null)
+            {
+                str = _text.text;
+            }
+
+            if (_textMeshPro!=null)
+            {
+                str = _textMeshPro.text;
+            }
+
+            if (_textMeshProUGUI!=null)
+            {
+                str = _textMeshProUGUI.text;
+            }
+            
+            
+            return str;
+        }
+        
+
+        public void InitComponent()
         {
             if (_init)
             {
@@ -85,6 +116,7 @@ namespace StarForce.LocalizationGenerator
             {
                 Debug.LogError($"{gameObject.name}:初始化LanguageText错误");
             }
+            
         }
 
         
@@ -128,7 +160,7 @@ namespace StarForce.LocalizationGenerator
 
             if (_showId)
             {
-                str = _id.ToString();
+                str = Id.ToString();
             }
 
             if (_text != null)
@@ -144,5 +176,29 @@ namespace StarForce.LocalizationGenerator
                 _textMeshProUGUI.text = str;
             }
         }
+
+        public string GetActiveText()
+        {
+            if (_text!=null)
+            {
+                return  _text.GetType().Name;
+            }
+
+            if (_textMeshPro!=null)
+            {
+                return _textMeshPro.mesh.GetType().Name;
+            }
+
+            if (_textMeshProUGUI!=null)
+            {
+                return _textMeshProUGUI.GetType().Name;
+            }
+            
+            return "";
+
+        }
+        
+        
+        
     }
 }

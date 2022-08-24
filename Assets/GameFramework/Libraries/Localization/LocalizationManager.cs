@@ -16,7 +16,7 @@ namespace GameFramework.Localization
     /// </summary>
     internal sealed partial class LocalizationManager : GameFrameworkModule, ILocalizationManager
     {
-        private readonly Dictionary<string, string> m_Dictionary;
+        private readonly Dictionary<int, string> m_Dictionary;
         private readonly DataProvider<ILocalizationManager> m_DataProvider;
         private ILocalizationHelper m_LocalizationHelper;
         private Language m_Language;
@@ -26,7 +26,7 @@ namespace GameFramework.Localization
         /// </summary>
         public LocalizationManager()
         {
-            m_Dictionary = new Dictionary<string, string>(StringComparer.Ordinal);
+            m_Dictionary = new Dictionary<int, string>();
             m_DataProvider = new DataProvider<ILocalizationManager>(this);
             m_LocalizationHelper = null;
             m_Language = Language.Unspecified;
@@ -327,7 +327,7 @@ namespace GameFramework.Localization
         /// </summary>
         /// <param name="key">字典主键。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString(string key)
+        public string GetString(int key)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -345,7 +345,7 @@ namespace GameFramework.Localization
         /// <param name="key">字典主键。</param>
         /// <param name="arg">字典参数。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T>(string key, T arg)
+        public string GetString<T>(int key, T arg)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -372,7 +372,7 @@ namespace GameFramework.Localization
         /// <param name="arg1">字典参数 1。</param>
         /// <param name="arg2">字典参数 2。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2>(string key, T1 arg1, T2 arg2)
+        public string GetString<T1, T2>(int key, T1 arg1, T2 arg2)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -401,7 +401,7 @@ namespace GameFramework.Localization
         /// <param name="arg2">字典参数 2。</param>
         /// <param name="arg3">字典参数 3。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3>(string key, T1 arg1, T2 arg2, T3 arg3)
+        public string GetString<T1, T2, T3>(int key, T1 arg1, T2 arg2, T3 arg3)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -432,7 +432,7 @@ namespace GameFramework.Localization
         /// <param name="arg3">字典参数 3。</param>
         /// <param name="arg4">字典参数 4。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
+        public string GetString<T1, T2, T3, T4>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -465,7 +465,7 @@ namespace GameFramework.Localization
         /// <param name="arg4">字典参数 4。</param>
         /// <param name="arg5">字典参数 5。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+        public string GetString<T1, T2, T3, T4, T5>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -500,7 +500,7 @@ namespace GameFramework.Localization
         /// <param name="arg5">字典参数 5。</param>
         /// <param name="arg6">字典参数 6。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+        public string GetString<T1, T2, T3, T4, T5, T6>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -537,7 +537,7 @@ namespace GameFramework.Localization
         /// <param name="arg6">字典参数 6。</param>
         /// <param name="arg7">字典参数 7。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -576,7 +576,7 @@ namespace GameFramework.Localization
         /// <param name="arg7">字典参数 7。</param>
         /// <param name="arg8">字典参数 8。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -617,7 +617,7 @@ namespace GameFramework.Localization
         /// <param name="arg8">字典参数 8。</param>
         /// <param name="arg9">字典参数 9。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -660,7 +660,7 @@ namespace GameFramework.Localization
         /// <param name="arg9">字典参数 9。</param>
         /// <param name="arg10">字典参数 10。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -705,7 +705,7 @@ namespace GameFramework.Localization
         /// <param name="arg10">字典参数 10。</param>
         /// <param name="arg11">字典参数 11。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -752,7 +752,7 @@ namespace GameFramework.Localization
         /// <param name="arg11">字典参数 11。</param>
         /// <param name="arg12">字典参数 12。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -801,7 +801,7 @@ namespace GameFramework.Localization
         /// <param name="arg12">字典参数 12。</param>
         /// <param name="arg13">字典参数 13。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -852,7 +852,7 @@ namespace GameFramework.Localization
         /// <param name="arg13">字典参数 13。</param>
         /// <param name="arg14">字典参数 14。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -906,7 +906,7 @@ namespace GameFramework.Localization
         /// <param name="arg14">字典参数 14。</param>
         /// <param name="arg15">字典参数 15。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -962,7 +962,7 @@ namespace GameFramework.Localization
         /// <param name="arg15">字典参数 15。</param>
         /// <param name="arg16">字典参数 16。</param>
         /// <returns>要获取的字典内容字符串。</returns>
-        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(string key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16)
+        public string GetString<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(int key, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16)
         {
             string value = GetRawString(key);
             if (value == null)
@@ -986,9 +986,9 @@ namespace GameFramework.Localization
         /// </summary>
         /// <param name="key">字典主键。</param>
         /// <returns>是否存在字典。</returns>
-        public bool HasRawString(string key)
+        public bool HasRawString(int key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (key<0)
             {
                 throw new GameFrameworkException("Key is invalid.");
             }
@@ -1001,9 +1001,9 @@ namespace GameFramework.Localization
         /// </summary>
         /// <param name="key">字典主键。</param>
         /// <returns>字典值。</returns>
-        public string GetRawString(string key)
+        public string GetRawString(int key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (key<0)
             {
                 throw new GameFrameworkException("Key is invalid.");
             }
@@ -1023,9 +1023,9 @@ namespace GameFramework.Localization
         /// <param name="key">字典主键。</param>
         /// <param name="value">字典内容。</param>
         /// <returns>是否增加字典成功。</returns>
-        public bool AddRawString(string key, string value)
+        public bool AddRawString(int key, string value)
         {
-            if (string.IsNullOrEmpty(key))
+            if (key<0)
             {
                 throw new GameFrameworkException("Key is invalid.");
             }
@@ -1044,9 +1044,9 @@ namespace GameFramework.Localization
         /// </summary>
         /// <param name="key">字典主键。</param>
         /// <returns>是否移除字典成功。</returns>
-        public bool RemoveRawString(string key)
+        public bool RemoveRawString(int key)
         {
-            if (string.IsNullOrEmpty(key))
+            if (key<0)
             {
                 throw new GameFrameworkException("Key is invalid.");
             }
