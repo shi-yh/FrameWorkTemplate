@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
+using GameFramework;
+using LitJson;
 
 namespace StarForce.LocalizationGenerator
 {
@@ -50,18 +54,75 @@ namespace StarForce.LocalizationGenerator
 
             if (GUILayout.Button("上传更新字符串"))
             {
-                CollectLanguage(myTarget.GetText());
+                int id = CollectLanguage(myTarget.GetText());
+
+                myTarget.Id = id;
             }
         }
 
-        private void CollectLanguage(string text)
-        {        
+        private int CollectLanguage(string text)
+        {
             UTF8Encoding utf8 = new UTF8Encoding();
 
             text = utf8.GetString(utf8.GetBytes(text));
+
+            TextAsset ta = AssetDatabase.LoadAssetAtPath($"Assets/GameMain/Localization/Language.txt", typeof(TextAsset)) as TextAsset;
+
+            if (ta == null)
+            {
+                Debug.LogError("Assets/GameMain/Localization/Language.txt 不存在");
+            }
+
+            JsonData jd = JsonMapper.ToObject(ta.text);
+
+            for (int i = 0; i < jd.Count; i++)
+            {
+                ///如果有对应的
+                if (jd[i]["ChineseSimplified"].ToString().Equals(text))
+                {
+                    return int.Parse(jd[i]["Id"].ToString());
+                }
+            }
+
+            ///有远端后改远端数据库自增
+            int id = int.Parse(jd[^1]["Id"].ToString())+1;
+
+            JsonData temp = JsonMapper.ToObject(jd[^1].ToJson());
+
+            temp["Id"] = id;
+            temp["ChineseSimplified"] = text;
+
+            jd.Add(temp);
             
-            // Dictionary<>
+            try
+            {
+                using (FileStream fileStream = new FileStream("Assets/GameMain/Localization/Language.txt", FileMode.Create, FileAccess.Write))
+                {
+                    using (TextWriter sw = new StreamWriter(fileStream,  Encoding.UTF8))
+                    {
+
+                        string result = jd.ToJson();
+                        
+                        Regex reg = new Regex(@"(?i)\\[uU]([0-9a-f]{4})");
+                        result = reg.Replace(result, delegate (Match m) { return ((char)Convert.ToInt32(m.Groups[1].Value, 16)).ToString(); });
+
+                        
+                        sw.WriteLine(result);
+                    }
+                }
             
+               
+                
+                Debug.Log(Utility.TextUtility.Format("Parse Language.txt success.", "Assets/GameMain/Localization/Language.txt"));
+            }
+            catch (Exception exception)
+            {
+                Debug.LogError(Utility.TextUtility.Format("Parse Language.txt failure, exception is '{1}'.", "Assets/GameMain/Localization/Language.txt", exception));
+            }
+
+            
+            
+            return id;
         }
     }
 }

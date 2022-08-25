@@ -57,11 +57,11 @@ namespace StarForce
 
                         string key = xmlNodeString.Attributes.GetNamedItem("Key").Value;
                         string value = xmlNodeString.Attributes.GetNamedItem("Value").Value;
-                        if (!localizationManager.AddRawString(key, value))
-                        {
-                            Log.Warning("Can not add raw string with key '{0}' which may be invalid or duplicate.", key);
-                            return false;
-                        }
+                        // if (!localizationManager.AddRawString(key, value))
+                        // {
+                        //     Log.Warning("Can not add raw string with key '{0}' which may be invalid or duplicate.", key);
+                        //     return false;
+                        // }
                     }
                 }
 

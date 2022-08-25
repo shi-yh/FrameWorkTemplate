@@ -140,40 +140,8 @@ namespace UnityGameFramework.Runtime
         /// <returns>是否解析字典成功。</returns>
         public override bool ParseData(ILocalizationManager localizationManager, string dictionaryString, object userData)
         {
-            try
-            {
-                int position = 0;
-                string dictionaryLineString = null;
-                while ((dictionaryLineString = dictionaryString.ReadLine(ref position)) != null)
-                {
-                    if (dictionaryLineString[0] == '#')
-                    {
-                        continue;
-                    }
-
-                    string[] splitedLine = dictionaryLineString.Split(ColumnSplitSeparator, StringSplitOptions.None);
-                    if (splitedLine.Length != ColumnCount)
-                    {
-                        Log.Warning("Can not parse dictionary line string '{0}' which column count is invalid.", dictionaryLineString);
-                        return false;
-                    }
-
-                    string dictionaryKey = splitedLine[1];
-                    string dictionaryValue = splitedLine[3];
-                    if (!localizationManager.AddRawString(dictionaryKey, dictionaryValue))
-                    {
-                        Log.Warning("Can not add raw string with dictionary key '{0}' which may be invalid or duplicate.", dictionaryKey);
-                        return false;
-                    }
-                }
-
-                return true;
-            }
-            catch (Exception exception)
-            {
-                Log.Warning("Can not parse dictionary string with exception '{0}'.", exception);
-                return false;
-            }
+            Log.Error("请使用其他的解析代码");
+            return false;
         }
 
         /// <summary>
@@ -187,32 +155,8 @@ namespace UnityGameFramework.Runtime
         /// <returns>是否解析字典成功。</returns>
         public override bool ParseData(ILocalizationManager localizationManager, byte[] dictionaryBytes, int startIndex, int length, object userData)
         {
-            try
-            {
-                using (MemoryStream memoryStream = new MemoryStream(dictionaryBytes, startIndex, length, false))
-                {
-                    using (BinaryReader binaryReader = new BinaryReader(memoryStream, Encoding.UTF8))
-                    {
-                        while (binaryReader.BaseStream.Position < binaryReader.BaseStream.Length)
-                        {
-                            string dictionaryKey = binaryReader.ReadString();
-                            string dictionaryValue = binaryReader.ReadString();
-                            if (!localizationManager.AddRawString(dictionaryKey, dictionaryValue))
-                            {
-                                Log.Warning("Can not add raw string with dictionary key '{0}' which may be invalid or duplicate.", dictionaryKey);
-                                return false;
-                            }
-                        }
-                    }
-                }
-
-                return true;
-            }
-            catch (Exception exception)
-            {
-                Log.Warning("Can not parse dictionary bytes with exception '{0}'.", exception);
-                return false;
-            }
+            Log.Error("请使用其他的解析代码");
+            return false;
         }
 
         /// <summary>

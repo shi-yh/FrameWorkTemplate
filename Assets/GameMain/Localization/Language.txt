@@ -1,0 +1,1 @@
+﻿[{"Id":0,"English":"START","ChineseSimplified":"开始","ChineseTraditional":"開始"},{"Id":1,"English":"START","ChineseSimplified":"星际力量","ChineseTraditional":"開始"}]
