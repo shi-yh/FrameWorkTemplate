@@ -988,11 +988,6 @@ namespace GameFramework.Localization
         /// <returns>是否存在字典。</returns>
         public bool HasRawString(int key)
         {
-            if (key<0)
-            {
-                throw new GameFrameworkException("Key is invalid.");
-            }
-
             return m_Dictionary.ContainsKey(key);
         }
 
@@ -1003,11 +998,6 @@ namespace GameFramework.Localization
         /// <returns>字典值。</returns>
         public string GetRawString(int key)
         {
-            if (key<0)
-            {
-                throw new GameFrameworkException("Key is invalid.");
-            }
-
             string value = null;
             if (m_Dictionary.TryGetValue(key, out value))
             {
@@ -1025,11 +1015,6 @@ namespace GameFramework.Localization
         /// <returns>是否增加字典成功。</returns>
         public bool AddRawString(int key, string value)
         {
-            if (key<0)
-            {
-                throw new GameFrameworkException("Key is invalid.");
-            }
-
             if (m_Dictionary.ContainsKey(key))
             {
                 return false;
@@ -1046,11 +1031,6 @@ namespace GameFramework.Localization
         /// <returns>是否移除字典成功。</returns>
         public bool RemoveRawString(int key)
         {
-            if (key<0)
-            {
-                throw new GameFrameworkException("Key is invalid.");
-            }
-
             return m_Dictionary.Remove(key);
         }
 

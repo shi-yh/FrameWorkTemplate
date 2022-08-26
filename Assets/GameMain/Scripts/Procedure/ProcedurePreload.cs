@@ -9,6 +9,7 @@ using GameFramework;
 using GameFramework.Event;
 using GameFramework.Resource;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
@@ -78,10 +79,13 @@ namespace StarForce
             LoadConfig("DefaultConfig");
             
             // Preload dictionaries
-            LoadDictionary("Default");
+            LoadDictionary("Language");
 
             // Preload fonts
             LoadFont("MainFont");
+            
+            LoadFontAsset("MainFont_Asset");
+            
         }
 
         private void LoadConfig(string configName)
@@ -121,6 +125,24 @@ namespace StarForce
                     Log.Error("Can not load font '{0}' from '{1}' with error message '{2}'.", fontName, assetName, errorMessage);
                 }));
         }
+
+        private void LoadFontAsset(string fontAssetName)
+        {
+            m_LoadedFlag.Add(Utility.TextUtility.Format("FontAsset.{0}", fontAssetName), false);
+            GameEntry.Resource.LoadAsset(AssetUtility.GetTMPFontAsset(fontAssetName), Constant.AssetPriority.FontAsset, new LoadAssetCallbacks(
+                (assetName, asset, duration, userData) =>
+                {
+                    m_LoadedFlag[Utility.TextUtility.Format("FontAsset.{0}", fontAssetName)] = true;
+                    UGuiForm.SetMainFontAsset((TMP_FontAsset)asset);
+                    Log.Info("Load FontAsset '{0}' OK.", fontAssetName);
+                },
+
+                (assetName, status, errorMessage, userData) =>
+                {
+                    Log.Error("Can not load FontAsset '{0}' from '{1}' with error message '{2}'.", fontAssetName, assetName, errorMessage);
+                }));
+        }
+        
 
         private void OnLoadConfigSuccess(object sender, GameEventArgs e)
         {

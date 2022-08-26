@@ -16,13 +16,14 @@ namespace StarForce.LocalizationGenerator
         SecondTitle,
         ThirdTitle
     }
-    
+
     [ExecuteInEditMode]
     public class LanguageText : MonoBehaviour
     {
         private TextMeshPro _textMeshPro;
         private Text _text;
         private TextMeshProUGUI _textMeshProUGUI;
+        [HideInInspector] [SerializeField] private int _id = -1;
 
         /// <summary>
         /// 是否是显示Id的模式
@@ -33,7 +34,11 @@ namespace StarForce.LocalizationGenerator
 
         private string _languageStr;
 
-        public int Id { get; set; } = -1;
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
         public LanguageTextMode TextMode { get; set; }
 
@@ -46,30 +51,34 @@ namespace StarForce.LocalizationGenerator
 
         private void OnDestroy()
         {
-            
         }
 
         public string GetText()
         {
             string str = "";
 
-            if (_text!=null)
+            if (_text != null)
             {
                 str = _text.text;
             }
 
-            if (_textMeshPro!=null)
+            if (_textMeshPro != null)
             {
                 str = _textMeshPro.text;
             }
 
-            if (_textMeshProUGUI!=null)
+            if (_textMeshProUGUI != null)
             {
                 str = _textMeshProUGUI.text;
             }
-            
-            
+
+
             return str;
+        }
+
+        public bool HasInit()
+        {
+            return _init;
         }
         
 
@@ -80,7 +89,6 @@ namespace StarForce.LocalizationGenerator
                 return;
             }
 
-            _init = true;
 
             if (_text == null && _textMeshPro == null && _textMeshProUGUI == null)
             {
@@ -115,11 +123,14 @@ namespace StarForce.LocalizationGenerator
             else
             {
                 Debug.LogError($"{gameObject.name}:初始化LanguageText错误");
+                _init = false;
+                return;
             }
-            
+
+            _init = true;
         }
 
-        
+
         /// <summary>
         /// 改变多语言展示模式
         /// </summary>
@@ -132,26 +143,26 @@ namespace StarForce.LocalizationGenerator
             }
 
             _showId = showId;
-            
-            RefreshText(_languageStr);   
+
+            RefreshText(_languageStr);
         }
 
-        public void SetFont(Font font,TMP_FontAsset fontAsset)
+        public void SetFont(Font font, TMP_FontAsset fontAsset)
         {
             if (_text != null)
             {
                 _text.font = font;
             }
-            else if (_textMeshPro!=null)
+            else if (_textMeshPro != null)
             {
                 _textMeshPro.font = fontAsset;
             }
-            else if (_textMeshProUGUI.text!=null)
+            else if (_textMeshProUGUI.text != null)
             {
                 _textMeshProUGUI.font = fontAsset;
             }
         }
-        
+
         public void RefreshText(string str)
         {
             InitComponent();
@@ -167,11 +178,11 @@ namespace StarForce.LocalizationGenerator
             {
                 _text.text = str;
             }
-            else if (_textMeshPro!=null)
+            else if (_textMeshPro != null)
             {
                 _textMeshPro.text = str;
             }
-            else if (_textMeshProUGUI.text!=null)
+            else if (_textMeshProUGUI.text != null)
             {
                 _textMeshProUGUI.text = str;
             }
@@ -179,26 +190,22 @@ namespace StarForce.LocalizationGenerator
 
         public string GetActiveText()
         {
-            if (_text!=null)
+            if (_text != null)
             {
-                return  _text.GetType().Name;
+                return _text.GetType().Name;
             }
 
-            if (_textMeshPro!=null)
+            if (_textMeshPro != null)
             {
                 return _textMeshPro.mesh.GetType().Name;
             }
 
-            if (_textMeshProUGUI!=null)
+            if (_textMeshProUGUI != null)
             {
                 return _textMeshProUGUI.GetType().Name;
             }
-            
-            return "";
 
+            return "";
         }
-        
-        
-        
     }
 }

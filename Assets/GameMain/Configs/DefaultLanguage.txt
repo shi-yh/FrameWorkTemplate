@@ -1,0 +1,12 @@
+﻿[{
+	"Id": -1,
+	"English": "Checking if the game needs update. Please wait...",
+	"ChineseSimplified": "正在检查游戏是否需要更新，请稍候……",
+	"ChineseTraditional": "正在檢查遊戲是否需要更新，請稍候……"
+},
+{
+	"Id": -2,
+	"English": "{0}/{1}, {2}/{3}, {4:P0}, {5}/s",
+	"ChineseSimplified": "{0}/{1}, {2}/{3}, {4:P0}, {5}/s",
+	"ChineseTraditional": "{0}/{1}, {2}/{3}, {4:P0}, {5}/s"
+}]

@@ -52,7 +52,7 @@ namespace StarForce.LocalizationGenerator
             {
             }
 
-            if (GUILayout.Button("上传更新字符串"))
+            if (myTarget.HasInit()&&GUILayout.Button("上传更新字符串"))
             {
                 int id = CollectLanguage(myTarget.GetText());
 
@@ -62,6 +62,11 @@ namespace StarForce.LocalizationGenerator
 
         private int CollectLanguage(string text)
         {
+            if (string.IsNullOrEmpty(text))
+            {
+                return -1;
+            }
+            
             UTF8Encoding utf8 = new UTF8Encoding();
 
             text = utf8.GetString(utf8.GetBytes(text));
@@ -120,7 +125,7 @@ namespace StarForce.LocalizationGenerator
                 Debug.LogError(Utility.TextUtility.Format("Parse Language.txt failure, exception is '{1}'.", "Assets/GameMain/Localization/Language.txt", exception));
             }
 
-            
+            AssetDatabase.Refresh();
             
             return id;
         }

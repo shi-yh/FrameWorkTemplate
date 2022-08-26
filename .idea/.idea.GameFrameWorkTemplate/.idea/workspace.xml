@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aba6f01-e241-4431-9c25-fc75968409d2" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/DefaultLocalizationHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/DefaultLocalizationHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultDictionary.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultDictionary.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Localization/Language.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Localization/Language.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/XmlLocalizationHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/XmlLocalizationHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/MenuForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/MenuForm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/SettingForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/SettingForm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +54,8 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugin/BoltCoreMigration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity 2021.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/MenuOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/e5/2a6ab129/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/ac/83e4539b/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/EditorGameService/EditorGameServiceRemoteConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/92/36047f2e/IDictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/40/c717740b/PresetType.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,13 +73,10 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/ConfigProcessor.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGeneratorMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LocalizationGenerator/LanguageText.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Text.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/Tools/TextTools.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/ILocalizationManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/LocalizationComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureCheckVersion.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureUpdateResources.cs" />
@@ -86,8 +88,14 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7DB51AE-D199-4277-A2A4-4BDB68CD3AC9/f6/9a9d70eb/JsonData.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Localization/Language.txt" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultDictionary.xml" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultLanguage.txt" />
+      <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2DWYKAnp4UR8hbOvY6qWj9cxRde" />
@@ -103,7 +111,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -125,10 +133,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2172">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2172" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -151,6 +159,7 @@
       <workItem from="1661321919991" duration="13362000" />
       <workItem from="1661415984570" duration="4077000" />
       <workItem from="1661420165067" duration="2528000" />
+      <workItem from="1661479754940" duration="5156000" />
     </task>
     <servers />
   </component>
@@ -241,26 +250,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs</url>
-          <line>68</line>
+          <line>73</line>
           <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\LanguageTextEditor.cs" initialLine="67" containingFunctionPresentation="method 'CollectLanguage'">
             <startOffsets>
-              <option value="1868" />
+              <option value="2000" />
             </startOffsets>
             <endOffsets>
-              <option value="1991" />
+              <option value="2123" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs</url>
-          <line>66</line>
+          <line>71</line>
           <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\LanguageTextEditor.cs" initialLine="65" containingFunctionPresentation="method 'CollectLanguage'">
             <startOffsets>
-              <option value="1811" />
+              <option value="1943" />
             </startOffsets>
             <endOffsets>
-              <option value="1854" />
+              <option value="1986" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="26" />

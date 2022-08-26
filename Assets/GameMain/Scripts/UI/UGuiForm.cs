@@ -26,18 +26,11 @@ namespace StarForce
         private CanvasGroup m_CanvasGroup = null;
         private List<Canvas> m_CachedCanvasContainer = new List<Canvas>();
 
-        public int OriginalDepth
-        {
-            get;
-            private set;
-        }
+        public int OriginalDepth { get; private set; }
 
         public int Depth
         {
-            get
-            {
-                return m_CachedCanvas.sortingOrder;
-            }
+            get { return m_CachedCanvas.sortingOrder; }
         }
 
         public void Close()
@@ -77,15 +70,15 @@ namespace StarForce
 
         public static void SetMainFontAsset(TMP_FontAsset mainFontAsset)
         {
-            if (mainFontAsset==null)
+            if (mainFontAsset == null)
             {
                 Log.Error("Main font Asset is invalid.");
                 return;
             }
 
-            s_MainFontAsset = s_MainFontAsset;
+            s_MainFontAsset = mainFontAsset;
         }
-        
+
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)
@@ -110,10 +103,10 @@ namespace StarForce
             gameObject.GetOrAddComponent<GraphicRaycaster>();
 
             LanguageText[] texts = GetComponentsInChildren<LanguageText>(true);
-            
+
             foreach (var t in texts)
             {
-                t.SetFont(s_MainFont,s_MainFontAsset);
+                t.SetFont(s_MainFont, s_MainFontAsset);
                 t.RefreshText(GameEntry.Localization.GetString(t.Id));
             }
         }

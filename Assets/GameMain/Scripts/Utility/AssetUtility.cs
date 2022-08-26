@@ -23,13 +23,20 @@ namespace StarForce
 
         public static string GetDictionaryAsset(string assetName, bool fromBytes)
         {
-            return Utility.TextUtility.Format("Assets/GameMain/Localization/{0}/Dictionaries/{1}.{2}", GameEntry.Localization.Language, assetName, fromBytes ? "bytes" : "xml");
+            return Utility.TextUtility.Format("Assets/GameMain/Localization/{1}.{2}", GameEntry.Localization.Language, assetName, fromBytes ? "bytes" : "txt");
         }
 
         public static string GetFontAsset(string assetName)
         {
             return Utility.TextUtility.Format("Assets/GameMain/Fonts/{0}.ttf", assetName);
         }
+
+        public static string GetTMPFontAsset(string assetName)
+        {
+            return Utility.TextUtility.Format("Assets/GameMain/Fonts/{0}.asset", assetName);
+
+        }
+        
 
         public static string GetSceneAsset(string assetName)
         {
