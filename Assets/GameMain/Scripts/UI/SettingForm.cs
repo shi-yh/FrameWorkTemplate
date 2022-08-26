@@ -31,10 +31,7 @@ namespace StarForce
 
         [SerializeField]
         private Slider m_UISoundVolumeSlider = null;
-
-        [SerializeField]
-        private CanvasGroup m_LanguageTipsCanvasGroup = null;
-
+        
         [SerializeField]
         private Toggle m_EnglishToggle = null;
 
@@ -90,7 +87,7 @@ namespace StarForce
             }
 
             m_SelectedLanguage = Language.English;
-            RefreshLanguageTips();
+            ChangeSelectLanguage();
         }
 
         public void OnChineseSimplifiedSelected(bool isOn)
@@ -101,7 +98,7 @@ namespace StarForce
             }
 
             m_SelectedLanguage = Language.ChineseSimplified;
-            RefreshLanguageTips();
+            ChangeSelectLanguage();
         }
 
         public void OnChineseTraditionalSelected(bool isOn)
@@ -112,7 +109,7 @@ namespace StarForce
             }
 
             m_SelectedLanguage = Language.ChineseTraditional;
-            RefreshLanguageTips();
+            ChangeSelectLanguage();
         }
 
         public void OnKoreanSelected(bool isOn)
@@ -123,22 +120,27 @@ namespace StarForce
             }
 
             m_SelectedLanguage = Language.Korean;
-            RefreshLanguageTips();
+            ChangeSelectLanguage();
         }
+
+        private void ChangeSelectLanguage()
+        {
+            if (m_SelectedLanguage != GameEntry.Localization.Language)
+            {
+                GameEntry.Setting.SetString(Constant.Setting.Language, m_SelectedLanguage.ToString());
+                GameEntry.Setting.Save();
+                
+                GameEntry.Localization.Language = m_SelectedLanguage;
+            }
+        }
+        
 
         public void OnSubmitButtonClick()
         {
-            if (m_SelectedLanguage == GameEntry.Localization.Language)
-            {
-                Close();
-                return;
-            }
-
-            GameEntry.Setting.SetString(Constant.Setting.Language, m_SelectedLanguage.ToString());
-            GameEntry.Setting.Save();
-
-            GameEntry.Sound.StopMusic();
-            UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Restart);
+          
+            // UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Restart);
+            
+            Close();
         }
 
 #if UNITY_2017_3_OR_NEWER
@@ -189,16 +191,6 @@ namespace StarForce
 #endif
         {
             base.OnUpdate(elapseSeconds, realElapseSeconds);
-
-            if (m_LanguageTipsCanvasGroup.gameObject.activeSelf)
-            {
-                m_LanguageTipsCanvasGroup.alpha = 0.5f + 0.5f * Mathf.Sin(Mathf.PI * Time.time);
-            }
-        }
-
-        private void RefreshLanguageTips()
-        {
-            m_LanguageTipsCanvasGroup.gameObject.SetActive(m_SelectedLanguage != GameEntry.Localization.Language);
         }
     }
 }

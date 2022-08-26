@@ -51,6 +51,7 @@ namespace StarForce.LocalizationGenerator
 
         private void OnDestroy()
         {
+            
         }
 
         public string GetText()

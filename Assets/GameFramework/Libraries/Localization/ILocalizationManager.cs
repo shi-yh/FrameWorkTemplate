@@ -5,6 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using System.Collections.Generic;
 using GameFramework.Resource;
 
 namespace GameFramework.Localization
@@ -487,7 +488,7 @@ namespace GameFramework.Localization
         /// <param name="key">字典主键。</param>
         /// <param name="value">字典内容。</param>
         /// <returns>是否增加字典成功。</returns>
-        bool AddRawString(int key, string value);
+        bool AddRawString(int key, Dictionary<Language,string> value);
 
         /// <summary>
         /// 移除字典。

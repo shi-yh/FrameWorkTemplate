@@ -51,6 +51,8 @@ namespace UnityGameFramework.Runtime
             set
             {
                 m_LocalizationManager.Language = value;
+                
+                m_EventComponent.Fire(this, ChangeLanguageEventArgs.Create());
             }
         }
 
@@ -177,7 +179,7 @@ namespace UnityGameFramework.Runtime
         {
             m_LocalizationManager.FreeCachedBytes();
         }
-
+        
         /// <summary>
         /// 读取字典。
         /// </summary>

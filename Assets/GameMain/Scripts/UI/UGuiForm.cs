@@ -7,6 +7,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using GameFramework.Event;
 using StarForce.LocalizationGenerator;
 using TMPro;
 using UnityEngine;
@@ -25,6 +26,9 @@ namespace StarForce
         private Canvas m_CachedCanvas = null;
         private CanvasGroup m_CanvasGroup = null;
         private List<Canvas> m_CachedCanvasContainer = new List<Canvas>();
+
+        private LanguageText[] _texts;
+
 
         public int OriginalDepth { get; private set; }
 
@@ -101,15 +105,26 @@ namespace StarForce
             transform.sizeDelta = Vector2.zero;
 
             gameObject.GetOrAddComponent<GraphicRaycaster>();
+            
+            MatchLanguage();
+        }
 
-            LanguageText[] texts = GetComponentsInChildren<LanguageText>(true);
+        private void MatchLanguage()
+        {
+            _texts ??= GetComponentsInChildren<LanguageText>(true);
 
-            foreach (var t in texts)
+            foreach (var t in _texts)
             {
                 t.SetFont(s_MainFont, s_MainFontAsset);
                 t.RefreshText(GameEntry.Localization.GetString(t.Id));
             }
         }
+
+        private void MatchLanguage(object sender, GameEventArgs e)
+        {
+            MatchLanguage();
+        }
+        
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnRecycle()
@@ -131,6 +146,9 @@ namespace StarForce
             m_CanvasGroup.alpha = 0f;
             StopAllCoroutines();
             StartCoroutine(m_CanvasGroup.FadeToAlpha(1f, FadeTime));
+            
+            GameEntry.Event.Subscribe(ChangeLanguageEventArgs.EventId, MatchLanguage);
+
         }
 
 #if UNITY_2017_3_OR_NEWER
@@ -140,6 +158,9 @@ namespace StarForce
 #endif
         {
             base.OnClose(isShutdown, userData);
+            
+            GameEntry.Event.Unsubscribe(ChangeLanguageEventArgs.EventId, MatchLanguage);
+            
         }
 
 #if UNITY_2017_3_OR_NEWER

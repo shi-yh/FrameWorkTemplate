@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aba6f01-e241-4431-9c25-fc75968409d2" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/ChangeLanguageEventArgs.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/ChangeLanguageEventArgs.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/ILocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/ILocalizationManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultDictionary.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultDictionary.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Localization/Language.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Localization/Language.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/LocalizationComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/LocalizationComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/MenuForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/MenuForm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/SettingForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/SettingForm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +74,28 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LocalizationGenerator/LanguageText.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Utility/Utility.Text.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/Tools/TextTools.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/ILocalizationManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/LocalizationComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureCheckVersion.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureUpdateResources.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/DefaultLocalizationHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/XmlLocalizationHelper.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7DB51AE-D199-4277-A2A4-4BDB68CD3AC9/f6/9a9d70eb/JsonData.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Localization/Language.txt" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultDictionary.xml" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultLanguage.txt" />
-      <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/ILocalizationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/ChangeLanguageEventArgs.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/LocalizationComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2DWYKAnp4UR8hbOvY6qWj9cxRde" />
@@ -133,10 +133,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15132">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="15132" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -160,6 +160,7 @@
       <workItem from="1661415984570" duration="4077000" />
       <workItem from="1661420165067" duration="2528000" />
       <workItem from="1661479754940" duration="5156000" />
+      <workItem from="1661485962545" duration="4340000" />
     </task>
     <servers />
   </component>

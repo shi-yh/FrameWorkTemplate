@@ -16,7 +16,7 @@ namespace GameFramework.Localization
     /// </summary>
     internal sealed partial class LocalizationManager : GameFrameworkModule, ILocalizationManager
     {
-        private readonly Dictionary<int, string> m_Dictionary;
+        private readonly Dictionary<int, Dictionary<Language,string>> m_Dictionary;
         private readonly DataProvider<ILocalizationManager> m_DataProvider;
         private ILocalizationHelper m_LocalizationHelper;
         private Language m_Language;
@@ -26,7 +26,7 @@ namespace GameFramework.Localization
         /// </summary>
         public LocalizationManager()
         {
-            m_Dictionary = new Dictionary<int, string>();
+            m_Dictionary = new Dictionary<int, Dictionary<Language,string>>();
             m_DataProvider = new DataProvider<ILocalizationManager>(this);
             m_LocalizationHelper = null;
             m_Language = Language.Unspecified;
@@ -998,10 +998,15 @@ namespace GameFramework.Localization
         /// <returns>字典值。</returns>
         public string GetRawString(int key)
         {
-            string value = null;
+            Dictionary<Language,string> value = null;
             if (m_Dictionary.TryGetValue(key, out value))
             {
-                return value;
+                string str;
+                if (value.TryGetValue(m_Language,out str))
+                {
+                    return str;
+                }
+                
             }
 
             return null;
@@ -1013,14 +1018,14 @@ namespace GameFramework.Localization
         /// <param name="key">字典主键。</param>
         /// <param name="value">字典内容。</param>
         /// <returns>是否增加字典成功。</returns>
-        public bool AddRawString(int key, string value)
+        public bool AddRawString(int key, Dictionary<Language,string> value)
         {
             if (m_Dictionary.ContainsKey(key))
             {
                 return false;
             }
 
-            m_Dictionary.Add(key, value ?? string.Empty);
+            m_Dictionary.Add(key, value ?? new Dictionary<Language, string>());
             return true;
         }
 

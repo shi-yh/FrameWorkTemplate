@@ -1,1 +1,71 @@
-﻿[{"Id":0,"English":"START","ChineseSimplified":"开始","ChineseTraditional":"開始"},{"Id":1,"English":"STAR FORCE","ChineseSimplified":"星际力量","ChineseTraditional":"星際力量"},{"Id":2,"English":"QUIT","ChineseSimplified":"退出","ChineseTraditional":"退出"},{"Id":3,"English":"ABOUT","ChineseSimplified":"关于","ChineseTraditional":"關於"},{"Id":4,"English":"SETTINGS","ChineseSimplified":"设置","ChineseTraditional":"設置"},{"Id":5,"English":"SETTINGS","ChineseSimplified":"音效","ChineseTraditional":"音效"},{"Id":6,"English":"SETTINGS","ChineseSimplified":"界面音效","ChineseTraditional":"介面音效"},{"Id":7,"English":"SETTINGS","ChineseSimplified":"语言设置","ChineseTraditional":"語言設置"},{"Id":8,"English":"SETTINGS","ChineseSimplified":"英语","ChineseTraditional":"設置"},{"Id":9,"English":"SETTINGS","ChineseSimplified":"简体中文","ChineseTraditional":"設置"},{"Id":10,"English":"SETTINGS","ChineseSimplified":"繁体中文","ChineseTraditional":"設置"},{"Id":11,"English":"SETTINGS","ChineseSimplified":"确认","ChineseTraditional":"設置"},{"Id":12,"English":"SETTINGS","ChineseSimplified":"取消","ChineseTraditional":"設置"},{"Id":13,"English":"SETTINGS","ChineseSimplified":"音乐","ChineseTraditional":"音樂"}]
+﻿[{
+	"Id": 0,
+	"English": "START",
+	"ChineseSimplified": "开始",
+	"ChineseTraditional": "開始"
+}, {
+	"Id": 1,
+	"English": "STAR FORCE",
+	"ChineseSimplified": "星际力量",
+	"ChineseTraditional": "星際力量"
+}, {
+	"Id": 2,
+	"English": "QUIT",
+	"ChineseSimplified": "退出",
+	"ChineseTraditional": "退出"
+}, {
+	"Id": 3,
+	"English": "ABOUT",
+	"ChineseSimplified": "关于",
+	"ChineseTraditional": "關於"
+}, {
+	"Id": 4,
+	"English": "SETTINGS",
+	"ChineseSimplified": "设置",
+	"ChineseTraditional": "設置"
+}, {
+	"Id": 5,
+	"English": "Sound FX",
+	"ChineseSimplified": "音效",
+	"ChineseTraditional": "音效"
+}, {
+	"Id": 6,
+	"English": "UI Sound FX",
+	"ChineseSimplified": "界面音效",
+	"ChineseTraditional": "介面音效"
+}, {
+	"Id": 7,
+	"English": "SETTINGS",
+	"ChineseSimplified": "语言设置",
+	"ChineseTraditional": "語言設置"
+}, {
+	"Id": 8,
+	"English": "English",
+	"ChineseSimplified": "英语",
+	"ChineseTraditional": "設置"
+}, {
+	"Id": 9,
+	"English": "Simplified Chinese",
+	"ChineseSimplified": "简体中文",
+	"ChineseTraditional": "設置"
+}, {
+	"Id": 10,
+	"English": "Traditional Chinese",
+	"ChineseSimplified": "繁体中文",
+	"ChineseTraditional": "設置"
+}, {
+	"Id": 11,
+	"English": "CONFIRM",
+	"ChineseSimplified": "确认",
+	"ChineseTraditional": "設置"
+}, {
+	"Id": 12,
+	"English": "CANCEL",
+	"ChineseSimplified": "取消",
+	"ChineseTraditional": "設置"
+}, {
+	"Id": 13,
+	"English": "Music",
+	"ChineseSimplified": "音乐",
+	"ChineseTraditional": "音樂"
+}]

@@ -1,25 +1,40 @@
 
 using System;
+using System.Collections.Generic;
 using GameFramework.Localization;
 using LitJson;
+using StarForce.LocalizationGenerator;
 using UnityGameFramework.Runtime;
 
 namespace StarForce
 {
     public class JsonLocalizationHelper: DefaultLocalizationHelper
     {
+
+        
         public override bool ParseData(ILocalizationManager localizationManager, string dictionaryString, object userData)
         {
             try
             {
-                string currentLanguage = GameEntry.Localization.Language.ToString();
-
                 JsonData jd = JsonMapper.ToObject(dictionaryString);
-
+                
                 for (int i = 0; i < jd.Count; i++)
                 {
                     JsonData cur = jd[i];
-                    if (!localizationManager.AddRawString(int.Parse(cur["Id"].ToString()),cur[currentLanguage].ToString()))
+                    
+                    Dictionary<Language, string> tempData = new Dictionary<Language, string>();
+                    
+                    foreach (var VARIABLE in cur.Keys)
+                    {
+                        Language result;
+                        
+                        if (Enum.TryParse(VARIABLE, out result))
+                        {
+                            tempData.Add(result,cur[VARIABLE].ToString());
+                        }
+                    }
+                    
+                    if (!localizationManager.AddRawString(int.Parse(cur["Id"].ToString()),tempData))
                     {
                         Log.Warning("Can not add raw string with key '{0}' which may be invalid or duplicate.", cur["Id"]);
                         return false;
