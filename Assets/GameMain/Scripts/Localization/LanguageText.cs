@@ -1,10 +1,6 @@
-using System;
 using TMPro;
-using TreeEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityGameFramework.Runtime;
-using Object = System.Object;
 
 namespace StarForce.LocalizationGenerator
 {
@@ -36,8 +32,8 @@ namespace StarForce.LocalizationGenerator
 
         public int Id
         {
-            get { return _id; }
-            set { _id = value; }
+            get => _id;
+            set => _id = value;
         }
 
         public LanguageTextMode TextMode { get; set; }
@@ -45,14 +41,8 @@ namespace StarForce.LocalizationGenerator
         private void Awake()
         {
             InitComponent();
-
-            // GameEntry.Localization.
         }
 
-        private void OnDestroy()
-        {
-            
-        }
 
         public string GetText()
         {
@@ -81,7 +71,7 @@ namespace StarForce.LocalizationGenerator
         {
             return _init;
         }
-        
+
 
         public void InitComponent()
         {
