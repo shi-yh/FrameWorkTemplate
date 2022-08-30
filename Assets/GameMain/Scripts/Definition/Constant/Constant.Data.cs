@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace StarForce
+namespace GameMain
 {
     public partial class Constant 
     {

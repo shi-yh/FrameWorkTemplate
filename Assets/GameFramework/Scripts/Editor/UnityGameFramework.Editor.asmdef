@@ -1,8 +1,10 @@
 {
     "name": "UnityGameFramework.Editor",
+    "rootNamespace": "",
     "references": [
         "GameFrameWork",
-        "UnityGameFramework.Runtime"
+        "UnityGameFramework.Runtime",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"

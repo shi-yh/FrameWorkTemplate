@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using GameFramework.Localization;
 using LitJson;
-using StarForce.LocalizationGenerator;
+using GameMain.LocalizationGenerator;
 using UnityGameFramework.Runtime;
 
-namespace StarForce
+namespace GameMain
 {
     public class JsonLocalizationHelper: DefaultLocalizationHelper
     {

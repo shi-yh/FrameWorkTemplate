@@ -10,7 +10,7 @@ using GameFramework;
 using UnityEditor;
 using UnityEngine;
 
-namespace StarForce.Editor.DataTableTools
+namespace GameMain.Editor.DataTableTools
 {
     public sealed class DataTableGeneratorMenu
     {

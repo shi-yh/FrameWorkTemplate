@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using GameFramework;
 using LitJson;
 
-namespace StarForce.LocalizationGenerator
+namespace GameMain.LocalizationGenerator
 {
     using TMPro;
     using UnityEditor.Presets;

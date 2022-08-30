@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using StarForce.LocalizationGenerator;
+using GameMain.LocalizationGenerator;
 using TMPro;
 using UnityEditor;
 using UnityEngine;

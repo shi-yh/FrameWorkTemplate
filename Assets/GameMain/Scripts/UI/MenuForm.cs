@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace StarForce
+namespace GameMain
 {
     public class MenuForm : UGuiForm
     {
@@ -37,8 +37,8 @@ namespace StarForce
             GameEntry.UI.OpenDialog(new DialogParams()
             {
                 Mode = 2,
-                Title = GameEntry.Localization.GetString(/*"AskQuitGame.Title"*/0),
-                Message = GameEntry.Localization.GetString(/*"AskQuitGame.Message"*/0),
+                Title = GameEntry.Localization.GetString(14),
+                Message = GameEntry.Localization.GetString(15),
                 OnClickConfirm = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
             });
         }

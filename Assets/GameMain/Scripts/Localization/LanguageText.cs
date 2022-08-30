@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace StarForce.LocalizationGenerator
+namespace GameMain.LocalizationGenerator
 {
     public enum LanguageTextMode
     {
