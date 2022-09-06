@@ -18,15 +18,11 @@ namespace GameMain
 {
     public class ProcedurePreload : ProcedureBase
     {
-       
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
 
         public override bool UseNativeDialog
         {
-            get
-            {
-                return true;
-            }
+            get { return true; }
         }
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
@@ -77,15 +73,14 @@ namespace GameMain
         {
             // Preload configs
             LoadConfig("DefaultConfig");
-            
+
             // Preload dictionaries
             LoadDictionary("Language");
 
             // Preload fonts
             LoadFont("MainFont");
-            
+
             LoadFontAsset("MainFont_Asset");
-            
         }
 
         private void LoadConfig(string configName)
@@ -116,14 +111,10 @@ namespace GameMain
                 (assetName, asset, duration, userData) =>
                 {
                     m_LoadedFlag[Utility.TextUtility.Format("Font.{0}", fontName)] = true;
-                    UGuiForm.SetMainFont((Font)asset);
+                    UGuiForm.SetMainFont((Font) asset);
                     Log.Info("Load font '{0}' OK.", fontName);
                 },
-
-                (assetName, status, errorMessage, userData) =>
-                {
-                    Log.Error("Can not load font '{0}' from '{1}' with error message '{2}'.", fontName, assetName, errorMessage);
-                }));
+                (assetName, status, errorMessage, userData) => { Log.Error("Can not load font '{0}' from '{1}' with error message '{2}'.", fontName, assetName, errorMessage); }));
         }
 
         private void LoadFontAsset(string fontAssetName)
@@ -133,49 +124,42 @@ namespace GameMain
                 (assetName, asset, duration, userData) =>
                 {
                     m_LoadedFlag[Utility.TextUtility.Format("FontAsset.{0}", fontAssetName)] = true;
-                    UGuiForm.SetMainFontAsset((TMP_FontAsset)asset);
+                    UGuiForm.SetMainFontAsset((TMP_FontAsset) asset);
                     Log.Info("Load FontAsset '{0}' OK.", fontAssetName);
                 },
-
-                (assetName, status, errorMessage, userData) =>
-                {
-                    Log.Error("Can not load FontAsset '{0}' from '{1}' with error message '{2}'.", fontAssetName, assetName, errorMessage);
-                }));
+                (assetName, status, errorMessage, userData) => { Log.Error("Can not load FontAsset '{0}' from '{1}' with error message '{2}'.", fontAssetName, assetName, errorMessage); }));
         }
-        
+
 
         private void OnLoadConfigSuccess(object sender, GameEventArgs e)
         {
-            LoadConfigSuccessEventArgs ne = (LoadConfigSuccessEventArgs)e;
+            LoadConfigSuccessEventArgs ne = (LoadConfigSuccessEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
             }
-
-            m_LoadedFlag[ne.ConfigAssetName] = true;
-            Log.Info("Load config '{0}' OK.", ne.ConfigAssetName);
-            
             
             ///loadData
             string[] strs = GameEntry.Config.GetString("Tables").Split(';');
 
-            if (strs==null||strs.Length<=0)
+            if (strs == null || strs.Length <= 0)
             {
                 Log.Error("ConfigTables Error");
             }
-            
+
             // Preload data tables
             foreach (string dataTableName in strs)
             {
                 LoadDataTable(dataTableName);
             }
 
-            
+            m_LoadedFlag[ne.ConfigAssetName] = true;
+            Log.Info("Load config '{0}' OK.", ne.ConfigAssetName);
         }
 
         private void OnLoadConfigFailure(object sender, GameEventArgs e)
         {
-            LoadConfigFailureEventArgs ne = (LoadConfigFailureEventArgs)e;
+            LoadConfigFailureEventArgs ne = (LoadConfigFailureEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -186,7 +170,7 @@ namespace GameMain
 
         private void OnLoadDataTableSuccess(object sender, GameEventArgs e)
         {
-            LoadDataTableSuccessEventArgs ne = (LoadDataTableSuccessEventArgs)e;
+            LoadDataTableSuccessEventArgs ne = (LoadDataTableSuccessEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -198,7 +182,7 @@ namespace GameMain
 
         private void OnLoadDataTableFailure(object sender, GameEventArgs e)
         {
-            LoadDataTableFailureEventArgs ne = (LoadDataTableFailureEventArgs)e;
+            LoadDataTableFailureEventArgs ne = (LoadDataTableFailureEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -209,7 +193,7 @@ namespace GameMain
 
         private void OnLoadDictionarySuccess(object sender, GameEventArgs e)
         {
-            LoadDictionarySuccessEventArgs ne = (LoadDictionarySuccessEventArgs)e;
+            LoadDictionarySuccessEventArgs ne = (LoadDictionarySuccessEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -221,7 +205,7 @@ namespace GameMain
 
         private void OnLoadDictionaryFailure(object sender, GameEventArgs e)
         {
-            LoadDictionaryFailureEventArgs ne = (LoadDictionaryFailureEventArgs)e;
+            LoadDictionaryFailureEventArgs ne = (LoadDictionaryFailureEventArgs) e;
             if (ne.UserData != this)
             {
                 return;

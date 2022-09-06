@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aba6f01-e241-4431-9c25-fc75968409d2" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/GameFramework.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/GameFramework.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/UGUIEventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/UGUIEventListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/AboutForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/AboutForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,22 +40,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/UIGenerator/UIScriptGenerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/PlasticSCM/Views/IncomingChanges/Gluon/IncomingChangesTreeHeaderState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/cc/fdd5a6cb/StringComparison.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/UI/UGuiForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Editor/CustomEditors/MarkerTrackEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/ScriptReferenceResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/PathUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/UI/UGuiForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/b0/a44d0abb/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Flow/Options/UnitBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Shared/EmptyGraphWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/PlasticSCM/Views/IncomingChanges/Developer/IncomingChangesTab.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BBAE6AF5-2A2A-4BD9-82F8-FDE9721D2C3B/0c/d97287b8/Regex.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/70/df088049/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/24/10996648/Path.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity 2021.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity 2021.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.State/Transitions/StateTransitionWidget.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Editor/treeview/ItemGui/TimelineMarkerClusterGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3EC1164-F0BC-4447-925E-02C351F0CD64/bb/b7eca2e1/XmlDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugin/BoltCoreMigration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity 2021.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/MenuOptions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGUIEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/e5/2a6ab129/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/ac/83e4539b/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
@@ -96,7 +93,6 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultDictionary.xml" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Configs/DefaultLanguage.txt" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AssetUtility.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/LocalizationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Libraries/Localization/ILocalizationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/ChangeLanguageEventArgs.cs" />
@@ -119,6 +115,8 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/AboutForm.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGUIEventListener.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureMain.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2DWYKAnp4UR8hbOvY6qWj9cxRde" />
@@ -187,7 +185,7 @@
       <workItem from="1661765377405" duration="1465000" />
       <workItem from="1661827707616" duration="8283000" />
       <workItem from="1662371640885" duration="922000" />
-      <workItem from="1662427866370" duration="2264000" />
+      <workItem from="1662427866370" duration="5544000" />
     </task>
     <servers />
   </component>
