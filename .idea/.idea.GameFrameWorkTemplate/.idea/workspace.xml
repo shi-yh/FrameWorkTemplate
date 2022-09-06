@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aba6f01-e241-4431-9c25-fc75968409d2" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameFrameWorkTemplate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DataTableExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DataTableExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureChangeScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureChangeScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Launcher.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Launcher.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/GameFramework.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/GameFramework.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/UGUIEventListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/UGUIEventListener.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/AboutForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/AboutForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4A317319-33E0-419C-A5A9-95305014AD37/9b/f6803e3b/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/Collaborate/Views/MainPageView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/a3/386487d7/Preset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/UI/UGuiForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/Generator/UIView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Flow/Description/UnitAnalyser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Flow/Framework/Nesting/GraphOutputDescriptor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -41,6 +43,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E40E5A8F-982C-4B61-8A93-0D29F9BD091C/e8/6953e8b5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/22/a3156efc/XmlDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7DB51AE-D199-4277-A2A4-4BDB68CD3AC9/f6/9a9d70eb/JsonData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/UnityProject/GameFrameWorkTemplate/Assets/GameMain/Scripts/UI/UGuiForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/UIGenerator/UIScriptGenerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.18/Editor/PlasticSCM/Views/IncomingChanges/Gluon/IncomingChangesTreeHeaderState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377D90B6-A602-46C8-B0FC-F7D6E7B8F936/cc/fdd5a6cb/StringComparison.cs" root0="SKIP_HIGHLIGHTING" />
@@ -59,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugin/BoltCoreMigration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity 2021.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/MenuOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGUIEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/e5/2a6ab129/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/ac/83e4539b/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,8 +88,6 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/Tools/TextTools.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureCheckVersion.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureUpdateResources.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/DefaultLocalizationHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/XmlLocalizationHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs" />
@@ -100,10 +102,8 @@
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/ChangeLanguageEventArgs.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Localization/LocalizationComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Localization/Language.txt" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/LanguageText.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/Generator/UIGenerBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/UGUIEventListener.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/UI/Generator/UIView.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFramework/Scripts/Editor/UIGenerator/CodeGener.cs" />
@@ -113,6 +113,12 @@
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureChangeScene.cs" />
       <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/Localization/JsonLocalizationHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGuiForm.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/SettingForm.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/AboutForm.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/DialogForm.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UGUIEventListener.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2DWYKAnp4UR8hbOvY6qWj9cxRde" />
@@ -181,7 +187,7 @@
       <workItem from="1661765377405" duration="1465000" />
       <workItem from="1661827707616" duration="8283000" />
       <workItem from="1662371640885" duration="922000" />
-      <workItem from="1662427866370" duration="695000" />
+      <workItem from="1662427866370" duration="2264000" />
     </task>
     <servers />
   </component>
@@ -232,45 +238,6 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs</url>
-          <line>443</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="440" containingFunctionPresentation="method 'GenerateDataFile'">
-            <startOffsets>
-              <option value="15830" />
-            </startOffsets>
-            <endOffsets>
-              <option value="15855" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs</url>
-          <line>531</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="528" containingFunctionPresentation="method 'GetRowBytes'">
-            <startOffsets>
-              <option value="19270" />
-            </startOffsets>
-            <endOffsets>
-              <option value="19301" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/DataTableGenerator/DataTableProcessor.cs</url>
-          <line>538</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.cs" initialLine="535" containingFunctionPresentation="method 'GetRowBytes'">
-            <startOffsets>
-              <option value="19475" />
-            </startOffsets>
-            <endOffsets>
-              <option value="19565" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Editor/LanguageTextEditor.cs</url>
           <line>73</line>
           <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Editor\LanguageTextEditor.cs" initialLine="67" containingFunctionPresentation="method 'CollectLanguage'">
@@ -295,45 +262,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/ResourceComponent.cs</url>
-          <line>607</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameFramework\Scripts\Runtime\Resource\ResourceComponent.cs" initialLine="607" containingFunctionPresentation="method 'Start'">
-            <startOffsets>
-              <option value="15194" />
-            </startOffsets>
-            <endOffsets>
-              <option value="15323" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Resource/ResourceComponent.cs</url>
-          <line>1049</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameFramework\Scripts\Runtime\Resource\ResourceComponent.cs" initialLine="1049" containingFunctionPresentation="method 'LoadAsset'">
-            <startOffsets>
-              <option value="35700" />
-            </startOffsets>
-            <endOffsets>
-              <option value="35790" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs</url>
-          <line>159</line>
-          <properties documentPath="G:\UnityProject\GameFrameWorkTemplate\Assets\GameMain\Scripts\Procedure\ProcedurePreload.cs" initialLine="159" containingFunctionPresentation="method 'OnLoadConfigSuccess'">
-            <startOffsets>
-              <option value="6438" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6502" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

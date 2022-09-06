@@ -92,6 +92,8 @@ namespace GameMain
         {
             base.OnInit(userData);
 
+            SetView();
+
             m_CachedCanvas = gameObject.GetOrAddComponent<Canvas>();
             m_CachedCanvas.overrideSorting = true;
             OriginalDepth = m_CachedCanvas.sortingOrder;
@@ -105,8 +107,6 @@ namespace GameMain
             transform.sizeDelta = Vector2.zero;
 
             gameObject.GetOrAddComponent<GraphicRaycaster>();
-            
-            MatchLanguage();
         }
 
         private void MatchLanguage()
@@ -124,7 +124,7 @@ namespace GameMain
         {
             MatchLanguage();
         }
-        
+
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnRecycle()
@@ -143,12 +143,13 @@ namespace GameMain
         {
             base.OnOpen(userData);
 
+            MatchLanguage();
+
             m_CanvasGroup.alpha = 0f;
             StopAllCoroutines();
             StartCoroutine(m_CanvasGroup.FadeToAlpha(1f, FadeTime));
-            
-            GameEntry.Event.Subscribe(ChangeLanguageEventArgs.EventId, MatchLanguage);
 
+            RegisterEvent();
         }
 
 #if UNITY_2017_3_OR_NEWER
@@ -158,9 +159,8 @@ namespace GameMain
 #endif
         {
             base.OnClose(isShutdown, userData);
-            
-            GameEntry.Event.Unsubscribe(ChangeLanguageEventArgs.EventId, MatchLanguage);
-            
+
+            UnRegisterEvent();
         }
 
 #if UNITY_2017_3_OR_NEWER
@@ -244,5 +244,17 @@ namespace GameMain
             yield return m_CanvasGroup.FadeToAlpha(0f, duration);
             GameEntry.UI.CloseUIForm(this);
         }
+
+        protected virtual void RegisterEvent()
+        {
+            GameEntry.Event.Subscribe(ChangeLanguageEventArgs.EventId, MatchLanguage);
+        }
+
+        protected virtual void UnRegisterEvent()
+        {
+            GameEntry.Event.Unsubscribe(ChangeLanguageEventArgs.EventId, MatchLanguage);
+        }
+
+        protected abstract void SetView();
     }
 }

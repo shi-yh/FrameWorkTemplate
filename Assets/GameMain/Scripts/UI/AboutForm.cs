@@ -21,6 +21,12 @@ namespace GameMain
 
         private float m_InitPosition = 0f;
 
+
+        protected override void SetView()
+        {
+                
+        }
+
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)
 #else

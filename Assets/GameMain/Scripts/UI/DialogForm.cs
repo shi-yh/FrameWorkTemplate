@@ -63,6 +63,12 @@ namespace GameMain
             }
         }
 
+
+        protected override void SetView()
+        {
+            
+        }
+
         public void OnConfirmButtonClick()
         {
             Close();

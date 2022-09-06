@@ -17,6 +17,11 @@ namespace GameMain
 
         private ProcedureMenu m_ProcedureMenu = null;
 
+        protected override void SetView()
+        {
+            
+        }
+
         public void OnStartButtonClick()
         {
             m_ProcedureMenu.StartGame();

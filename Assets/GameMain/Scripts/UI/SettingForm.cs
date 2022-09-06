@@ -46,6 +46,11 @@ namespace GameMain
 
         private Language m_SelectedLanguage = Language.Unspecified;
 
+        protected override void SetView()
+        {
+            
+        }
+
         public void OnMusicMuteChanged(bool isOn)
         {
             GameEntry.Sound.Mute("Music", !isOn);
