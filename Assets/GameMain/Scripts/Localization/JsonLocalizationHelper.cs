@@ -10,8 +10,6 @@ namespace GameMain
 {
     public class JsonLocalizationHelper: DefaultLocalizationHelper
     {
-
-        
         public override bool ParseData(ILocalizationManager localizationManager, string dictionaryString, object userData)
         {
             try
